@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+@import url(./style.css);
+@import url(./loginStyle.css);
+@import url(./font.css);
+@import url(./layout.css);
+@import url(./all.css);
+
+
+.main .login span, .buisnessLog h3{
+    font-family: 'NanumSquareEB', sans-serif;
+}
+label .absolute, .arrowBtn a, .nextBtn a, .buisnessinfor p{
+    font-family: 'NanumSquareR', sans-serif;
+}
+.completeBtn a{
+    font-family: 'NanumSquareL', sans-serif;
+}
+
+.login span{
+    color: #004ea2;
+    font-weight: bold;
+}
+.snsLogin .google{
+    margin-bottom: 39px;
+}
+.underbar{
+    margin-bottom: 20px;
+}
+.buisnessjoin{
+    padding-top: 15px;
+}
+.buisnessLog h3{
+    color: #004ea2;
+    font-size: 1.188em;
+    margin-bottom: 40px;
+}
+.buisnessinfor{
+    display: flex;
+}
+.buisnessinfor p {
+    font-size: 0.875em;
+    padding-top: 6px;
+    padding-left: 15px;
+    letter-spacing: -1px;
+    color: #898989;
+    font-family: 'NanumSquareR';
+    font-weight: 700;
+}
+label button.idCheck{
+    color: #898989;
+}
+label .Certification{
+    width: 205px;
+    display: block;
+}
+.CertificationWrap{
+    position: relative;
+}
+label .absolute{
+    position: absolute;
+    bottom: 17px;
+    left: 160px;
+    color: #fff;
+    font-size: 0.688em;
+    font-weight: bold;
+}
+.arrowNext{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+.arrowBtn, .nextBtn{
+    margin-top: 55px;
+    position: relative;
+}
+.arrowBtn a, .nextBtn a{
+    padding: 0 30px;
+    color: #004ea2;
+    font-weight: bold;
+}
+.arrowBtn::before{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/arrow.png) no-repeat;
+    position: absolute;
+    cursor: pointer;
+    top: -6px;
+}
+.nextBtn::after{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/next.png) no-repeat;
+    position: absolute;
+    cursor: pointer;
+    right: -14px;
+    top: -6px;
+}
+label .inputW{
+    width: 60%;
+}
+label button.btnW{
+    width: 34.4%;
+    color: #898989;
+}
+label button.btnW.btnBack{
+    color: #a2c1e3;
+    background: #004ea2;
+}
+
+.buisnessLogNext .arrowBtn::before{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/arrowColor.png) no-repeat;
+    position: absolute;
+    cursor: pointer;
+    top: -6px;
+}
+
+
+
+
+
+.buisnessjoin #buisnessLogNext{
+    display: none;
+}
+
+.completeWrap{
+    display: none;
+}
+.complete{
+    padding-top: 40px;
+    border-top: 3px solid #004ea2;
+    padding: 40px 0px 40px 123px;
+    border-bottom: 1px solid #898989;
+    
+}
+.complete th{
+    padding-bottom: 20px;
+    text-align: left;
+    padding-right: 40px;
+    letter-spacing: -1px;
+}
+.complete tr:last-child th{
+    padding-bottom: 0;
+}
+.complete tr th:first-child{
+    color: #898989;
+}
+.idColor{
+    color: #004ea2;
+}
+.completeBtn{
+    width: 150px;
+    height: 45px;
+    border: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #004ea2;
+    margin-top: 38px;
+    margin-bottom: 101px;
+}
+.completeBtn a{
+    color: #fff;
+    font-family: 'NanumSquareL';
+    font-weight: bold;
+    font-size: 1.188em ;
+}
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-text-fill-color: #a2c1e3;
+    -webkit-box-shadow: 0 0 0px 1000px #004ea2 inset;
+    box-shadow: 0 0 0px 1000px #004ea2 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input:autofill,
+input:autofill:hover,
+input:autofill:focus,
+input:autofill:active {
+	-webkit-text-fill-color: #a2c1e3;
+    -webkit-box-shadow: 0 0 0px 1000px #004ea2 inset;
+    box-shadow: 0 0 0px 1000px #004ea2 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input[type=password]{
+    font-family:"굴림";
+}

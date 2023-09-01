@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+@import url(./font.css);
+
+/* Default */
+
+h1, address, .date, .contentBottom p{
+    font-family: 'NanumSquareL', sans-serif;
+}
+h3{
+    font-family: 'NanumSquareR', sans-serif;
+}
+.information div, table th, table td, .contentBottom p.name, .contentBottom p.bank, .contentBottom p.Notice{
+    font-family: 'NanumSquareB', sans-serif;
+}
+h2{
+    font-family: 'NanumSquareEB', sans-serif;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.paper {
+    width: 210mm;
+    min-height: 297mm;
+    /* padding: 20mm; //set contents area */ 
+    padding: 14mm;
+    margin: 10mm auto;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.content {
+    padding: 0;
+    /* border: 1px #888 dotted; */
+    height: 269mm;
+    position: relative;
+}
+.contentTop{
+    display: flex;
+    justify-content: space-between;
+}
+.contentL{
+    width: 90mm;
+}
+h1{
+    font-size: 34px;
+    margin:  0 0 11mm;
+    font-weight: normal;
+}
+.information div{
+    border-bottom: .5px solid #0000008f;
+    height: 8mm;
+    line-height: 8mm;
+    font-size: 12px;
+}
+.information div:last-child{
+    border: 0;
+}
+.contentR{
+    text-align: right;
+    position: relative;
+}
+h2{
+    font-size: 23px;
+    margin: 0;
+}
+h3{
+    margin: 0;
+    padding-top: 17px;
+    font-size: 19px;
+    font-weight: normal;
+}
+address{
+    padding-top: 17px;
+    font-size: 11px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -.5px;
+    color: #7c7c7c;
+    font-weight: bold;
+}
+.date{
+    position: absolute;
+    bottom: 8px;
+    left: 68px;
+    font-size: 13px;
+    letter-spacing: -.5px;
+    color: #7c7c7c;
+    font-weight: bold;
+}
+table:first-child{
+    width: 100%;
+    border-top: 2px solid;
+    border-bottom: .5px solid #0000008f;
+}
+table th{
+    font-size: 12px;
+    letter-spacing: -.5px;
+    padding: 12px 0;
+    
+}
+.detail{
+    height: 595px;
+}
+table:last-child{
+    width: 100%;
+    border-top: .5px solid #0000008f;
+    border-bottom: .5px solid #0000008f;
+}
+table td{
+    padding: 12px 0;
+    font-size: 12px;
+}
+table td:last-child{
+    text-align: right;
+    padding-right: 10px;
+}
+.contentBottom{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.contentBottom p{
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #7c7c7c;
+    letter-spacing: -.2px;
+}
+.contentBottom p.name, .contentBottom p.bank, .contentBottom p.Notice{
+    font-size: 15px;
+    color: #000;
+}
+.BottomL p:last-child{
+    line-height: 18px   ;
+    padding-top: 5px;
+}
+.BottomR p:last-child{
+    font-size: 10px;
+    line-height: 15px;
+}
+.contentBottom p.Notice{
+    padding-top: 15px;
+}
+.contentBottom p.bank, .contentBottom p.Notice{
+    padding-bottom: 4px;
+}
+button{
+    position: absolute;
+    bottom: -32px;
+    right: 0;
+}
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;
+        background: #fff;
+    }
+    .paper {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>견적 요청</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/estimate.css">
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="innerWrap">
+                <div class="headerWrap">
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="./img/logo.png" alt="코리아토목 logo"> 
+                        </a>
+                    </div>
+                    <div class="search">
+                        <form >
+                            <input type="text" placeholder="필요하신 품목명을 입력해주세요.">
+                            <button type="submit">버튼</button>
+                        </form>
+                        <table class="searchBottom">
+                            <tr>
+                                <th>자주찾는 품목</th> 
+                                <td>암거, 측구수로관, 블록, 그레이팅</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="login">
+                        <a href="./index.html">로그아웃</a>
+                        <a href="./requesting.html">견적요청현황 <img src="./img/new.png" alt=""></a>
+                        <a href="./order.html">발주현황</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="menu">
+            <div class="innerWrap">
+                <h1>토목자재 제조 전문기업 <span>코리아토목</span></h1>
+                <h2>검색에서 주문까지 누구나 쉽고 빠르게 완료 할 수 있는 토목자재 유통 전문 온라인 서비스 입니다.</h2>
+            </div>
+        </section>
+        <main>
+            <div class="innerWrap">
+                <div class="bestProductName">
+                    <span>
+                        <img src="./img/circle.png" alt="circle">
+                    </span>
+                    견적 요청서
+                </div>
+                <div class="mainFlex">
+                    <div class="mainL">
+                        <form action="">
+                            <div class="mainLTop">
+                                <div class="number">
+                                    <label for="">견적서 일련번호</label>
+                                    <span>31122023-11AXD0820</span>
+                                </div>
+                                <div>
+                                    <label for="">담당자명</label>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <label for="">담당자 연락처</label>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <label for="">회사명</label>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <label for="">이메일</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="mainLBottom">
+                                <div id="postcode-container">
+                                    <label for="">배송요청지역</label>
+                                    <input type="text" id="address" readonly>
+                                    <button type="button"  id="address_kakao">우편번호</button>
+                                </div>
+                                <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+                                <script>
+                                window.onload = function(){
+                                    document.getElementById("address_kakao").addEventListener("click", function(){ //주소입력칸을 클릭하면
+                                        //카카오 지도 발생
+                                        var width = 500; //팝업의 너비
+                                        var height = 600; 
+                                        new daum.Postcode({
+                                            width: width, //생성자에 크기 값을 명시적으로 지정해야 합니다.
+                                            height: height,
+                                            oncomplete: function(data) { //선택시 입력값 세팅
+                                                document.getElementById("address").value = data.address; // 주소 넣기
+                                                document.querySelector("input[name=address_detail]").focus(); //상세입력 포커싱
+                                            }
+                                        }).open({
+                                            left: (window.screen.width / 2) - (width / 2),
+                                            top: (window.screen.height / 2) - (height / 2)
+                                        });
+                                    });
+                                }
+                                </script>
+                                <div>
+                                    <label for="">상세주소</label>
+                                    <input type="text" name="address_detail">
+                                </div>
+                                <div>
+                                    <label for="">배송희망 일시</label>
+                                    <input type="text" class="width70">
+                                    <label class="contents" for="time">
+                                        <label class="labelWidth"><input type="radio" name="time" class="radioCheck" checked>9시 전</label>
+                                        <label class="labelWidth"><input type="radio" name="time" class="radioCheck">오전</label>
+                                        <label class="labelWidth"><input type="radio" name="time" class="radioCheck">당일</label>
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="">운반비 결재방식</label>
+                                    <label class="contents" for="pay">
+                                        <label class="labelWidth left"><input type="radio" name="pay" checked class="radioCheck radioCheckL">선불</label>
+                                        <label class="labelWidth left"><input type="radio" name="pay" class="radioCheck">착불</label>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="agreement">
+                            <label for="checkbox" class="custom-checkbox-label">
+                                개인정보이용 동의
+                                <input type="checkbox" id="checkbox"> 
+                                <span class="checkbox-image"></span>
+                            </label>
+                            <p>고객님의 개인정보는 견적 및 발송요청 등의 정보 외 사용하지 않습니다.</p>
+                        </div>
+                    </div>
+                    <div class="mainR">
+                        <form action="">
+                            <table>
+                                <tr>
+                                    <th>품목명</th>
+                                    <th>규격</th>
+                                    <th>단가</th>
+                                    <th>수량</th>
+                                    <th>무게</th>
+                                    <th>금액</th>
+                                </tr>
+                                <tr>
+                                    <td>안전 중하중 그레이팅 맨홀(집수정)용</td>
+                                    <td>400*500*50(7*4)</td>
+                                    <td class="color38">62,700</td>
+                                    <td><input type="text" placeholder="15">개</td>
+                                    <td class="color38">2,650</td>
+                                    <td>940,500</td>
+                                </tr>
+                                <tr>
+                                    <td>1련 암거</td>
+                                    <td>0.8*0.8*2.0_130T*130T-구</td>
+                                    <td class="color38">695,000</td>
+                                    <td><input type="text" placeholder="1">본</td>
+                                    <td class="color38">2,640</td>
+                                    <td>17,100</td>
+                                </tr>
+                                <tr>
+                                    <td>측구수로관 AN형(앵글부착) </td>
+                                    <td>200*200*2000*40T</td>
+                                    <td class="color38">60,500</td>
+                                    <td><input type="text" placeholder="20">본</td>
+                                    <td class="color38">170</td>
+                                    <td>1,210,000</td>
+                                </tr>
+                            </table>
+                            <div class="mainRBtm">
+                                <div>견적가</div>
+                                <div>
+                                    <span>13,500,000</span>
+                                    원
+                                </div>
+                            </div>
+                            <p>
+                                배송비와 부가세가 포함되지 않은 견적가 입니다. <br>
+                                견적요청을 선택해 주시면 당사 담당자가 확인 후 배송비가 포함된 견적금액을 전달하여 드립니다. <br>
+                                견적내용에 대한 문의는 고객센터 031 297 9826로 전화나 이메일 또는 채팅 상담으로 가능합니다.
+                            </p>
+                            <button type="button" class="RequestingShow">견적요청</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footerTop">
+                <div class="innerWrap">
+                    <div class="borderBottom">
+                        <div class="service ">
+                            <span>
+                                <img src="./img/circle.png" alt="">
+                            </span>
+                            고객센터
+                        </div>
+                    </div>
+                    <div class="informationBox">
+                        <div class="information">
+                            <div class="informationTop">
+                                <span>
+                                    <img src="./img/li.png" alt="">
+                                </span>
+                                근무시간
+                            </div>
+                            <div class="hours">
+                                <div class="hoursLeft">
+                                    <table>
+                                        <tr>
+                                            <td>평일</td>
+                                            <td>09:00 ~ 18:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>점심</td>
+                                            <td>12:00 ~ 13:00</td>
+                                        </tr>
+                                    </table>
+                                    <p>주말, 일요일, 공휴일은 휴무입니다.</p>
+                                </div>
+                                <div class="hoursRight">
+                                    <button type="button" class="btnColor">채팅상담</button>
+                                    <button type="button">제휴문의</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="information">
+                            <div class="informationTop">
+                                <span>
+                                    <img src="./img/li.png" alt="">
+                                </span>
+                                공지사항
+                            </div>
+                            <div class="announcement">
+                                <table>
+                                    <tr>
+                                        <td>2023.12.31</td>
+                                        <td><a href="javascript:">원자재값 인상으로 품목별 <!-- ~~ --></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023.11.10</td>
+                                        <td><a href="javascript:">THP고강도 파일의 단가변동</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023.09.30</td>
+                                        <td><a href="javascript:">홈페이지 개편완료</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="information">
+                            <div class="informationTop">
+                                <span>
+                                    <img src="./img/li.png" alt="">
+                                </span>
+                                은행정보
+                            </div>
+                            <div class="bank">
+                                <table>
+                                    <tr>
+                                        <td>예금주</td>
+                                        <td><a href="javascript:">(주)코리아토목</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>거래은행</td>
+                                        <td><a href="javascript:">기업은행</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>계좌번호</td>
+                                        <td><a href="javascript:">031-297-980</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="information">
+                            <div class="informationTop">
+                                <span>
+                                    <img src="./img/li.png" alt="">
+                                </span>
+                                찾아오시는 길
+                            </div>
+                            <div id="map"></div>
+                            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e207aa5e93734278f09da0ada22509e"></script>
+                            <script>
+                                // 카카오맵 API를 불러온 후 실행될 콜백 함수
+                                kakao.maps.load(function () {
+                                // 지도를 표시할 div의 id를 가져옴
+                                var container = document.getElementById('map');
+                            
+                                // 지도를 생성하는데 필요한 기본 옵션 설정
+                                var options = {
+                                    center: new kakao.maps.LatLng(37.22935437525413, 126.97293607845405), // 지도의 중심 좌표 (위도, 경도)
+                                    level: 3 // 지도의 확대 레벨 (1부터 14까지 가능)
+                                };
+                            
+                                // 지도를 생성
+                                var map = new kakao.maps.Map(container, options);
+                            
+                                // 지도에 마커를 표시하는 예시 (선택 사항)
+                                var markerPosition = new kakao.maps.LatLng(37.22935437525413, 126.97293607845405);
+                                var marker = new kakao.maps.Marker({
+                                    position: markerPosition
+                                });
+                                marker.setMap(map);
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerBtm">
+                <div class="innerWrap">
+                    <div class="addr">
+                        <cite>(주)코리아토목</cite>
+                        <address>대표 : 이재혁 / 경기도 수원시 권선구 서수원로 63번길 181 / 전화 : <a href="tel:031-297-9800">031-297-9800</a></address>
+                        <address>사업자등록번호 : 124-87-00160 [사업자정보확인] / 통신판매업신고 : 제 수원권선-0140 호</address>
+                        <address>개인정보관리책임자 : 김교정 / 이메일 : <a href="javascript:">2979802@naver.com</a> 코리아토목-토목자재도매단가쇼핑몰.All rights reserved.</address>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./js/estimate.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+@import url(./style.css);
+@import url(./font.css);
+@import url(./layout.css);
+@import url(./all.css);
+@import url(./estimate.css);
+
+
+
+
+
+
+
+.mainRBottom div label{
+    font-family: 'NanumSquareR', sans-serif;
+}
+.mainRBottom div span, .mainLTop > div, .mainLBottom > div{
+    font-family: 'NanumSquareL', sans-serif;
+}
+.mainRBottom div .price{
+    font-family: 'NanumSquareB', sans-serif;
+}
+
+
+
+.mainLTop label, .mainLBottom label{
+    font-size: 15px;
+}
+.mainLTop > div, .mainLBottom > div{
+    font-size: 0.875em;
+    font-weight: bold;
+    letter-spacing: -0.77px;
+}
+
+.mainLBottom label .labelWidth:first-child{
+    margin-left: 58px;
+}
+.mainLBottom label .labelWidth.left{
+    margin-left: 0;
+}
+
+.mainLTop div, .mainLBottom div{
+    line-height: 50px;
+}
+.mainRBottom div{
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #c9caca;
+    padding: 0 15px;
+
+}
+.mainRBottom div:last-child{
+    border-bottom: 1px solid #000;
+
+}
+.mainRBottom div label{
+    width: 113px;
+    font-weight: bold;
+    letter-spacing: -0.83px;
+    font-size: 0.938em;
+}
+.mainRBottom div span{
+    width: 70px;
+    font-size: 0.813em;
+    letter-spacing: -0.3px;
+    font-weight: bold;
+}
+.mainRBottom div:nth-child(3) span{
+    width: inherit;
+}
+.mainRBottom div .price{
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.125em;
+    color: #004ea2;
+}
+.mainRBottom div .price span{
+    width: inherit;
+    color: #898989;
+    font-size: 0.67em;
+    position: relative;
+    top: 1px;
+    padding-left: 3px;
+}
+.mainRBottom div:last-child{
+    justify-content: space-between;
+}
+.flexBtn{
+    display: flex;
+    justify-content: space-between;
+}
+.flexBtn p{
+    color: #898989;
+    letter-spacing: -0.49px;
+    font-size: 0.875em;
+}
+.flexBtn .twoBtutton{
+    margin-top: 30px;
+}
+.flexBtn .twoBtutton button:first-child{
+    background: #000;
+}
+.mainLTop div.number{
+    border-bottom: 3px solid #000;
+}
+.borderTop{
+    border-top: 3px solid;
+    box-sizing: border-box;
+    height: 53px;
+}
+.mainRBottom div:nth-child(3){
+    border-bottom: 0;
+}
+.mainRBottom div.price{
+    border-bottom: 0;
+}

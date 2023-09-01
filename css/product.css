@@ -1,0 +1,607 @@
+@charset "utf-8";
+
+@import url(./style.css);
+@import url(./font.css);
+@import url(./layout.css);
+@import url(./all.css);
+
+.selectBoxItem .bestProduct input,.selectBoxItem .bestProduct .W150  button, .productName, .selectBoxItem .borderBottom input, .selectBoxItem .bestProduct table .W710 span, .W100 button, .selectBoxItem .bestProduct .W150 button{
+    font-family: 'NanumSquareR', sans-serif;
+}
+
+.tabMenu p, .firstDepth > li > a.selected, .secoudDepth > li > .select, .selectItem .selectColor{
+    font-family: 'NanumSquareEB', sans-serif;
+}
+.choiceBtn button{
+    font-family: 'NanumSquareB', sans-serif;
+}
+ .classifyRName h1, .classifyRName h2, .selectBoxItem .bestProduct .background tr th, .productNavigation, .selectItem li a,.selectBoxItem .bestProduct table td .selectBoxItem , .selectBoxItem .bestProduct table td, .selectBoxItem .bestProduct table th,.selectBoxItem .bestProduct table .height55 td, .selectBoxItem .bestProduct table .height45, .buttoncheckBox button, .tabWrap button{
+    font-family: 'NanumSquareL', sans-serif;
+}
+
+.productNavigationSection{
+    width: 100%;
+    height: 350px;
+    background: #fbfbfb;
+}
+.productNavigationSection .innerWrap{
+    position: relative;
+}
+.classify{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.choiceBtn{
+    padding-top: 20px;
+    position: absolute;
+}
+.choiceBtn button{
+    width: 93px;
+    height: 30px;
+    border: 0;
+    color: #fff;
+    background: #a2a2a2;
+    letter-spacing: -0.77px;
+    font-size: 0.875em;
+}
+.choiceBtn button.ClickBlueBtn{
+    background: #004ea2;
+}
+.productNavigation{
+    width: 350px;
+    height: 100%;
+    font-weight: bold;
+}
+.MainCategory{
+    position: relative;
+    top: 73px;
+}
+.firstDepth{
+    list-style: disc;
+    font-size: 0.938em;
+    list-style-position: inside;
+}
+.firstDepth li::marker{
+    color: #004ea2;
+    font-size: 1px;
+    padding-right: 20px;
+}
+.firstDepth > li{
+    padding-bottom: 33px;
+    width: 168px;
+}
+.firstDepth li a{
+    color: #000;
+}
+.firstDepth > li > a{
+    padding: 15px 10px;
+}
+.firstDepth  li  a:hover{
+    color: #004ea2;
+    font-weight: bold;
+}
+.secoudDepth{
+    position: absolute;
+    left: 160px;
+    top: -3px;
+    line-height: 20px;
+    height: 261px;
+    display: none;
+    overflow-y: scroll;
+    width: 196px;
+}
+.secoudDepth::-webkit-scrollbar {
+    width: 8px;
+}
+.secoudDepth::-webkit-scrollbar-thumb {
+    background-color: #004ea2;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+.secoudDepth::-webkit-scrollbar-track {
+    background-color: #fbfbfb;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
+.secoudDepth a{
+    font-size: 0.87em;
+}
+.secoudDepth li{
+    line-height: 25px;
+    letter-spacing: -.98px;
+}
+.secoudDepth li span{
+    letter-spacing: normal;
+}
+.firstDepth > li > a.selected {
+    color: #004ea2;
+}
+.secoudDepth > li > .select {
+    color: #004ea2;
+}
+
+
+.selectItem .selectColor{
+    color: #004ea2;
+}
+
+
+.lineBar{
+    position: relative;
+    width: 3px;
+    height: 256px;
+    top: 72px;
+    background: #00000017;
+    left: 1px;
+}
+
+
+
+
+
+
+.selectProductBox{
+    width: 1050px;
+    height: 100%;
+    padding: 30px 0;
+    position: relative;
+}
+/* .productBox{
+    display: none;
+} */
+.productBox{
+    display: none;
+    position: absolute;
+    top: 70px;
+}
+.classifyselect{
+width: 270px;
+}
+.classifyRName{
+    padding-left: 28px;
+}
+.classifyRName h1{
+    font-size: 2.250em;
+    letter-spacing: -1.98px;
+    padding-bottom: 15px;
+    font-weight: normal;
+}
+.classifyRName h2{
+    font-size: 0.938em;
+    letter-spacing: -.83px;
+    font-weight: normal;
+    padding-left: 4px
+}
+.underbar{
+    margin-top: 65px;
+    margin-left: 30px;
+    width: 25px;
+    height: 1px;
+    background: #b5b5b5;
+
+}
+.selectItem{
+    margin-left: 33px;
+    margin-top: 24px;
+}
+.selectItem ul{
+    /* list-style: disc; */
+}
+.selectItem li{
+    position: relative;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    width: 80px;
+}
+.selectItem li::marker{
+    content: "•";
+    color: #004ea2;
+    font-size: 1px;
+    position: absolute;
+    
+}
+.selectItem li a{
+    font-size: 0.875em;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: -0.77px;
+}
+.selectItem li a:hover{
+    color: #004ea2;
+}
+.productsTop{
+    display: flex;
+    gap: 14px;
+    height: 153px;
+}
+.productsGrop{
+    width: 85px;
+}
+.productPhoto{
+    width: 85px;
+    height: 73px;
+    border: 1px solid #b5b5b5;
+    border-radius: 10px;
+}
+
+.productName{
+    font-size: 0.813em;
+    text-wrap: balance;
+    text-align: center;
+    color: #797979;
+    line-height: 1.31;
+    font-weight: normal;
+    letter-spacing: -.72px;
+    margin: 10px auto;
+    word-break: keep-all;
+}
+.productsBtmF{
+    left: 0;
+    top: 153px;
+}
+.productsP{
+    width: 780px    ;
+    position: relative;
+}
+.swiper-button-prev:after{
+    position: absolute;
+    left: -55px;
+    top: -66px;
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+    position: absolute;
+    right: -55px;
+    top: -66px;
+}
+.swiper-backface-hidden .swiper-slide{
+    width: 85px !important; 
+}
+.swiper-button-next, .swiper-button-prev{
+    color: #004ea2 !important;
+
+}
+.positionR{
+    position: relative;
+    left: -6px;
+    width: 100px;
+}
+.productsBtm{
+    display: flex;
+    gap: 11px;
+    width: 70px;
+    position: absolute;
+}
+.productsBtm .productPhoto{
+    width: 70px;
+    height: 60px;
+}
+.productsBtm .productName{
+    font-size: 0.750em;
+}
+.productPhoto1{
+    background: #fff url(../img/product1.png) no-repeat center;
+    background-size: contain;
+}
+.productPhoto2{
+    background: #fff url(../img/product2.png) no-repeat center;
+    background-size: contain;
+}
+.productPhoto3{
+    background: #fff url(../img/product3.png) no-repeat center;
+    background-size: contain;
+}
+.productPhoto4{
+    background: #fff url(../img/product4.png) no-repeat center;
+    background-size: contain;
+}
+.productPhoto5{
+    background: #fff url(../img/product5.png) no-repeat center;
+    background-size: contain;
+}
+.productPhoto6{
+    background: #fff url(../img/product6.png) no-repeat center;
+    background-size: contain;
+}
+.productPhoto7{
+    background: #fff url(../img/product7.png) no-repeat center;
+    background-size: contain;
+}
+.productPhoto8{
+    background: #fff url(../img/product8.png) no-repeat center;
+    background-size: contain;
+}
+.productPhoto9{
+    background: #fff url(../img/product2.png) no-repeat center;
+    background-size: contain;
+}
+.productPhoto10{
+    background: #fff url(../img/product3.png) no-repeat center;
+    background-size: contain;
+}
+.productPhoto11{
+    background: #fff url(../img/product4.png) no-repeat center;
+    background-size: contain;
+}
+.productPhoto12{
+    background: #fff url(../img/product12.png) no-repeat center;
+    background-size: contain;
+}
+.productPhoto13{
+    background: #fff url(../img/product13.png) no-repeat center;
+    background-size: contain;
+}
+.productPhoto14{
+    background: #fff url(../img/img9.png) no-repeat center;
+    background-size: contain;
+}
+.productPhoto15{
+    background: #fff url(../img/product15.png) no-repeat center;
+    background-size: contain;
+}
+.productPtClick{
+    box-shadow:  0 0 0 2px #004ea2 inset;
+    border-color: #004ea2;
+}
+
+
+
+
+.position{
+    position: relative;
+}
+
+.bestProduct{
+    margin-bottom: 0;
+}
+.tabWrap{
+    
+    position: absolute;
+    top: 108px;
+    left: 220px;
+}
+.tabWrap button{
+    width: 110px;
+    height: 35px;
+    background-color: #f4f4f4;
+    letter-spacing: -0.72px;
+    border: 0;
+    font-weight: bold;
+    color: #606060;
+}
+.tabWrap button.tabClick{
+    background: #000;
+    color: #fff;
+}
+.selectBoxItem .borderBottom{
+    border-bottom: 3px solid #000;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.selectBoxItem .bestProductName{
+    padding-bottom: 21px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+.selectBoxItem .bestProduct{
+    width: 100%;
+}
+.selectBoxItem .bestProduct table{
+    font-size: 0.875em;
+    width: 100%;
+}
+.selectBoxItem .bestProduct table span{
+    color: #797979;
+    font-size: 0.86em;
+}
+.selectBoxItem .bestProduct table tr{
+    height: 60px;
+    border-bottom: 1px solid #c9caca;
+    letter-spacing: -.5px;
+}
+.selectBoxItem .bestProduct table th{
+    vertical-align: middle;
+    line-height: 18.5px;
+}
+.selectBoxItem .bestProduct table td{
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.93em;
+    letter-spacing: normal;
+    font-weight: bold;
+}
+.selectBoxItem .bestProduct table td.fontW{
+    letter-spacing: -.72px;
+}
+.colorGrayClick{
+    display: none;
+}
+.W100{
+    width: 100px;
+}
+.W100 button{
+    width: 71px;
+    height: 30px;
+    border: 0;
+    background: #004ea2;
+    color: #fff;
+    font-size: 0.950em;
+}
+.W236{
+    width: 236px;
+}
+.W60{
+    width: 60px;
+}
+.W135{
+    width: 135px;
+}
+.W75{
+    width: 75px;
+}
+.W134{
+    width: 134px;
+}
+.W180{
+    width: 180px;
+}
+.selectBoxItem .bestProduct table td.W710{
+    width: 710px;
+    text-align: left;
+    padding-left: 20px;
+    line-height: 25px;
+    font-size: 14px;
+}
+.selectBoxItem .bestProduct table .W710 span{
+    display: block;
+    color: #000;
+    font-weight: normal;
+    font-size: 13px;
+}
+.W710 span::before{
+    color: #000;
+    padding-top: 8px;
+    content: "·";
+    font-weight: bold;
+    padding-right: 8px;
+}
+.W150{
+    width: 150px;
+}
+.W220{
+    width: 220px;
+}
+.W150 label{
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+}
+.selectBoxItem .bestProduct .W150 input, .selectBoxItem .bestProduct .W150  button{
+    width: 50px;
+    height: 26px;
+    border: 0;
+    padding: 0;
+}
+.selectBoxItem .bestProduct .W150 button{
+    background: #004ea2;
+    font-size: 11px;
+    color: #fff;
+}
+.selectBoxItem .bestProduct table .height45{
+    height: 45px;
+    background: #f2f2f2;
+    font-size: 0.93em;
+}
+.height45 .W180,.height45 .W150, .height45 .W100,
+.height55 .W180,.height55 .W150, .height55 .W100{
+    border-left: 1px solid #c9caca;
+}
+.selectBoxItem .bestProduct table .height55{
+    height: 55px;
+}
+.W170{
+    width: 170px;
+}
+.selectBoxItem .bestProduct .background tr th {
+    background: #f2f2f2;
+    /* padding: 0px 18.68px; */
+}
+.selectBoxItem .bestProduct input{
+    width: 72px;
+    height: 30px;
+    border: 0;
+    border-radius: 0;
+    background: #f0f0f0;
+    text-align: center;
+    font-weight: normal;
+}
+.selectBoxItem .bestProduct input:focus{
+    outline: 1px solid #000;
+}
+.selectBoxItem .bestProduct .buyImg{
+    width: 100%;
+    height: 70px;
+    background: url(../img/product1.png) no-repeat center;
+    background-size: 60px;
+}
+.selectBoxItem .bestProduct th button {
+    width: 70px;
+    height: 35px;
+    border: 0;
+    border-radius: 0;
+    background: #004ea2;
+    color: #fff;
+    font-size: 0.875em;
+    letter-spacing: -.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.selectBoxItem .borderBottom label{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+.selectBoxItem .bestProduct td button.colorGray{
+    background: #898989;
+}
+.selectBoxItem .bestProduct td button.colorGray:hover{
+    background: #000;
+}
+.selectBoxItem .bestProduct td button.colorGrayChange{
+    background: #000;
+}
+.selectBoxItem .borderBottom > label input{
+    width: 406px;
+    height: 44px;
+    background: #e6e6e6;
+    color: #6a6a6a;
+    border: none;
+    text-indent: 15px;
+    font-size: 0.938em;
+    font-weight: bold;
+    text-align: left;
+}
+.selectBoxItem .borderBottom > label input:focus{
+    outline: none;
+}
+.selectBoxItem .borderBottom button{
+    position: absolute;
+    right: 10px;
+    background: url(../img/productSearch.png) no-repeat;
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    top: 9px;
+    text-indent: -9999px;
+}
+.tabMenu img{
+    position: absolute;
+    right: 0;
+    top: 54px;
+}
+.tabMenu p{
+    position: absolute;
+    right: 10px;
+    color: #898989;
+    top: 168px;
+    line-height: 20px;
+}
+.buttoncheckBox{
+    display: flex;
+    justify-content: end;
+    padding-top: 30px;
+    margin-bottom: 208px;
+}
+.buttoncheckBox button{
+    width: 150px;
+    height: 45px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.188em;
+    line-height: 41px;
+    letter-spacing: -1.05px;
+}

@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+@import url(./style.css);
+@import url(./font.css);
+@import url(./layout.css);
+@import url(./all.css);
+
+.headerFont th, .buy td{
+    font-family: 'NanumSquareL', sans-serif;
+}
+.buy td input {
+    font-family: 'SCDream2', sans-serif;
+}
+.buy td button, .purchase{
+    font-family: 'NanumSquareR', sans-serif;
+}
+/* 
+
+{
+    font-family: 'NanumSquareEB', sans-serif;
+} */
+
+.mainMarginT{
+    margin-top: 0;
+}
+
+
+.top1{
+    position: relative;
+    top: 1px;
+}
+.buy{
+    margin-top: 110px;
+    position: relative;
+}
+.headerFont{
+    width: 100%;
+}
+.buy .nameColor{
+    color: #004ea2;
+    padding-right: 0;
+}
+.headerFont .left3{
+    left: -3px;
+}
+.headerFont table{
+    width: 100%;
+    border-top: 3px solid #004ea2;
+}
+.headerFont tr{
+    border-bottom: 1px solid #c9caca;
+}
+.headerFont tr th:first-child{
+    width: 100px;
+    padding-left: 0;
+}
+.headerFont tr th:nth-child(2){
+    width: 82px;
+}
+.headerFont tr th:nth-child(3){
+    width: 250px;
+}
+.headerFont th{
+    font-size: 0.875em;
+    letter-spacing: -.77px;
+    background: #f2f2f2;
+    vertical-align: middle;
+    height: 50px;
+}
+.headerFont td{
+    height: 60px;
+    top: -25px;
+    font-size: 0.813em;
+    letter-spacing: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: normal;
+}
+.headerFont td input{
+    width: 72px;
+    height: 33px;
+    border: 0;
+    border-radius: 0;
+    background: #f0f0f0;
+    text-align: center;
+    font-weight: 200;
+    font-size: 13px;
+    color: #000;
+}
+.headerFont td input:focus{
+    outline: 1px solid #000;
+}
+.headerFont td button{
+    width: 70px;
+    height: 35px;
+    border: 0;
+    border-radius: 0;
+    background: #004ea2;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: -.42px;
+    position: relative;
+    top: -1.5px;
+    font-weight: normal;
+}
+.headerFont td button:hover{
+    background: #004ea2;
+}
+.buyImg{
+    width: 100%;
+    height: 100%;
+    background: url(../img/img24.png) no-repeat center; 
+    background-size: 60px;
+}
+.W100{
+    width: 100px;
+}
+.W110{
+    width: 110px;
+}
+.W135{
+    width: 135px;
+}
+.W290{
+    width: 290px;
+}
+
+
+.custom-checkbox-label{
+    font-size: 15px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'NanumSquareR', sans-serif !important;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold !important;
+    padding-top: 20px;
+}
+
+.custom-checkbox-label input[type="checkbox"] {
+    display: none; 
+}
+
+.checkbox-image {
+    position: absolute;
+    top: 10px;
+    left: -25px;
+    width: 20px; 
+    height: 20px; 
+    background-image: url('../img/checkbox.png'); 
+    background-size: contain; 
+
+}
+.custom-checkbox-label input[type="checkbox"]:checked + .checkbox-image {
+    background-image: url('../img/checked.png'); 
+}
+
+.purchase{
+    width: 100px;
+    height: 35px;
+    border: 0;
+    background: #004ea2;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 13px;
+}
+.estimate{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+}

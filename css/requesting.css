@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+@import url(./style.css);
+@import url(./font.css);
+@import url(./layout.css);
+@import url(./all.css);
+@import url(./estimate.css);
+
+
+
+/* {
+    font-family: 'NanumSquareB', sans-serif;
+} */
+main table tr{
+    font-family: 'NanumSquareL', sans-serif;
+}
+main table tr td button{
+    font-family: 'SCDream4', sans-serif;
+}
+/* .mainLBottom input.radioCheck{
+    font-family: 'NanumSquareEB', sans-serif;
+} */
+
+
+
+
+main{
+    margin-bottom: 183px;
+}
+main table{
+    width: 100%;
+    border-top: 3px solid #000;
+    border-bottom: 1px solid #c9caca;
+}
+main table tr{
+    height: 50px;
+    text-align: center;
+    border-bottom: 1px solid #c9caca;
+}
+main table tr th{
+    background: #f4f4f4;
+    vertical-align: middle;
+    padding: 0 37px;
+    font-size: 0.938em;
+    font-weight: bold;
+}
+main table tr td{
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 0.938em;
+    letter-spacing: -0.83px;
+}
+main table tr td button{
+    width: 130px;
+    height: 35px;
+    background: #898989;
+    border: 0;
+    color: #fff;
+    font-size: 0.875em;
+    letter-spacing: -0.49px;
+}
+main table tr td button.blueBtn{
+    background: #004ea2;
+}
+main table tr td button.blackBtn{
+    background: #000;
+}
+.marginL150{
+    width: 150px;
+}
+.marginL177{
+    width: 177px;
+    padding: 0 0 0 53px ;
+}
+.marginL{
+    margin-left: 53px;
+}

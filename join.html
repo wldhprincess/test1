@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코리아토목 회원가입</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/joinstyle.css">
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="innerWrap">
+                <div class="headerWrap">
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="./img/logo.png" alt="코리아토목 logo"> 
+                        </a>
+                    </div>
+                    <div class="search">
+                        <form >
+                            <input type="text" placeholder="필요하신 품목명을 입력해주세요.">
+                            <button type="submit">버튼</button>
+                        </form>
+                        <table class="searchBottom">
+                            <tr>
+                                <th>자주찾는 품목</th> 
+                                <td>암거, 측구수로관, 블록, 그레이팅</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="login">
+                        <a href="./login.html">로그인</a>
+                        <a href="javascript:">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="innerWrap">
+                <form id="loginForm" action="">
+                    <h1 class="login">
+                        <span>코리아토목</span> 회원가입
+                    </h1>
+                    <div class="membertab">
+                        <div class="memberselect">
+                            <div class="member">
+                                <button type="button" id="normalMemberTab">일반 회원</button>
+                            </div>
+                            <div class="buisnessmember">
+                                <button type="button" id="businessMemberTab">사업자 회원</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="join">
+                        <div class="joinCheck">
+                            <label for="checkbox" class="custom-checkbox-label">
+                                <input type="checkbox" id="checkbox"> 개인정보 취급방침
+                                <span class="checkbox-image"></span>
+                                <button type="button">전문보기</button>
+                            </label>
+                            <label for="checkbox1"  class="custom-checkbox-label">
+                                <input type="checkbox" id="checkbox1"> 이용약관
+                                <span class="checkbox-image"></span>
+                                <button type="button">전문보기</button>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="memberLog">
+                        <div class="snsLoginHide">
+                            <div class="snsLogin">
+                                <button type="button" class="kakao">카카오톡 간편가입</button>
+                                <button type="button" class="naver">네이버로 간편가입</button>
+                                <button type="button" class="google">구글 간편가입</button>
+                            </div>
+                            <a href="tel:031-297-9825" class="serviceCall">고객센터 및 간편가입 오류문의 <span>&nbsp;&nbsp;031-297-9825</span></a>
+                            <p class="underbar">-</p>
+                            <address class="Copyright">
+                                Copyright &copy; KOREA TOMOK. All rights reserved 
+                            </address>
+                        </div>
+                    </div>
+                    <div class="buisnessjoin">
+                        <div class="buisnessLog buisnessLogShow" id="buisnessLogShow">
+                            <h3>필수정보 입력</h3>
+                            <table>
+                                <tr>
+                                    <th>아이디</th>
+                                    <td>
+                                        <label for="">
+                                            <input type="text" placeholder="아이디를 입력하세요" autocomplete="off" id="loginId" class="id inputW">
+                                            <button type="button" class="idCheck btnW" onclick="checkId()">중복확인</button>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>비밀번호</th>
+                                    <td>
+                                        <label for="">
+                                            <input type="password" autocomplete="off" placeholder="비밀번호를 입력하세요" id="password" >
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>비밀번호 확인</th>
+                                    <td>
+                                        <label for="">
+                                            <input type="password" autocomplete="off" placeholder="비밀번호를 입력하세요" id="password1" >
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>휴대전화인증</th>
+                                    <td>
+                                        <label for="" class="CertificationWrap">
+                                            <input type="text" class="inputW" placeholder="전화번호 입력" id="phone" autocomplete="off">
+                                            <button type="button" class="telWBtn btnW" id="startTimer">인증하기</button>
+                                            <input type="text" placeholder="인증번호 입력" autocomplete="off" class="Certification " id="CertificationNumber" ><span class="absolute" id="timer">00:03:00</span>
+                                        </label>
+                                        <div class="arrowNext">
+                                            <div class="arrowBtn">
+                                                <a href="javascript:" title="이전">이전</a>
+                                            </div>
+                                            <div class="nextBtn">
+                                                <a href="javascript:" title="다음">다음</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="buisnessLogNext buisnessLog" id="buisnessLogNext">
+                            <div class="buisnessinfor">
+                                <h3>선택 정보 입력</h3>
+                                <p>이곳에서 입력하시면 견적 요청시 추가로 정보를 입력하지 않습니다.</p>
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>담당자명</th>
+                                    <td>
+                                        <label for="">
+                                            <input type="text" autocomplete="off" id="managerName">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>담당자 연락처</th>
+                                    <td>
+                                        <label for="">
+                                            <input type="text" autocomplete="off" class="inputW" id="managerNumber">
+                                            <button type="button" class="btnW btnBack">통신사 선택</button>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>회사명</th>
+                                    <td>
+                                        <label for="">
+                                            <input type="text" autocomplete="off" id="companyName">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>회사주소</th>
+                                    <td>
+                                        <label for="">
+                                            <input type="text" autocomplete="off" class="inputW" id="companyAddress address" readonly>
+                                            <button type="button" class="btnW" id="address_kakao">우편번호</button>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+                                <script>
+                                window.onload = function(){
+                                    document.getElementById("address_kakao").addEventListener("click", function(){ //주소입력칸을 클릭하면
+                                        //카카오 지도 발생
+                                        var width = 500; //팝업의 너비
+                                        var height = 600; 
+                                        new daum.Postcode({
+                                            width: width, //생성자에 크기 값을 명시적으로 지정해야 합니다.
+                                            height: height,
+                                            oncomplete: function(data) { //선택시 입력값 세팅
+                                                document.getElementById("address").value = data.address; // 주소 넣기
+                                                document.querySelector("input[name=address_detail]").focus(); //상세입력 포커싱
+                                            }
+                                        }).open({
+                                            left: (window.screen.width / 2) - (width / 2),
+                                            top: (window.screen.height / 2) - (height / 2)
+                                        });
+                                    });
+                                }
+                                </script>
+                                <tr>
+                                    <th>상세주소</th>
+                                    <td>
+                                        <label for="">
+                                            <input type="text" autocomplete="off" id="detailedAddress"  name="address_detail">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>사업자등록증</th>
+                                    <td>
+                                        <label for="">
+                                            <input type="text" autocomplete="off" class="inputW" id="BusinessRegistration">
+                                            <button type="button" class="btnW">찾아보기</button>
+                                        </label>
+                                        <div class="arrowNext">
+                                            <div class="arrowBtn">
+                                                <a href="javascript:" title="이전">이전</a>
+                                            </div>
+                                            <div class="nextBtn completed">
+                                                <a href="javascript:" title="다음" >완료</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="completeWrap">
+                        <div class="complete">
+                            <table>
+                                <tr>
+                                    <th>기업명</th>
+                                    <th>(주)조은기업</th>
+                                </tr>
+                                <tr>
+                                    <th>아이디</th>
+                                    <th class="idColor">WATCHERS_JOEUN</th>
+                                </tr>
+                                <tr>
+                                    <th>가입일</th>
+                                    <th>2023.12.31</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <button type="button" class="completeBtn"><a href="./loginMain.html" title="다음">로그인</a></button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footerTop">
+                <div class="innerWrap">
+                    <div class="borderBottom">
+                        <div class="service ">
+                            <span>
+                                <img src="./img/circle.png" alt="">
+                            </span>
+                            고객센터
+                        </div>
+                    </div>
+                    <div class="informationBox">
+                        <div class="information">
+                            <div class="informationTop">
+                                <span>
+                                    <img src="./img/li.png" alt="">
+                                </span>
+                                근무시간
+                            </div>
+                            <div class="hours">
+                                <div class="hoursLeft">
+                                    <table>
+                                        <tr>
+                                            <td>평일</td>
+                                            <td>09:00 ~ 18:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>점심</td>
+                                            <td>12:00 ~ 13:00</td>
+                                        </tr>
+                                    </table>
+                                    <p>주말, 일요일, 공휴일은 휴무입니다.</p>
+                                </div>
+                                <div class="hoursRight">
+                                    <button type="button" class="btnColor">채팅상담</button>
+                                    <button type="button">제휴문의</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="information">
+                            <div class="informationTop">
+                                <span>
+                                    <img src="./img/li.png" alt="">
+                                </span>
+                                공지사항
+                            </div>
+                            <div class="announcement">
+                                <table>
+                                    <tr>
+                                        <td>2023.12.31</td>
+                                        <td><a href="javascript:">원자재값 인상으로 품목별 <!-- ~~ --></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023.11.10</td>
+                                        <td><a href="javascript:">THP고강도 파일의 단가변동</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023.09.30</td>
+                                        <td><a href="javascript:">홈페이지 개편완료</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="information">
+                            <div class="informationTop">
+                                <span>
+                                    <img src="./img/li.png" alt="">
+                                </span>
+                                은행정보
+                            </div>
+                            <div class="bank">
+                                <table>
+                                    <tr>
+                                        <td>예금주</td>
+                                        <td><a href="javascript:">(주)코리아토목</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>거래은행</td>
+                                        <td><a href="javascript:">기업은행</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>계좌번호</td>
+                                        <td><a href="javascript:">031-297-980</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="information">
+                            <div class="informationTop">
+                                <span>
+                                    <img src="./img/li.png" alt="">
+                                </span>
+                                찾아오시는 길
+                            </div>
+                            <div id="map"></div>
+                            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e207aa5e93734278f09da0ada22509e"></script>
+                            <script>
+                                // 카카오맵 API를 불러온 후 실행될 콜백 함수
+                                kakao.maps.load(function () {
+                                // 지도를 표시할 div의 id를 가져옴
+                                var container = document.getElementById('map');
+                            
+                                // 지도를 생성하는데 필요한 기본 옵션 설정
+                                var options = {
+                                    center: new kakao.maps.LatLng(37.22935437525413, 126.97293607845405), // 지도의 중심 좌표 (위도, 경도)
+                                    level: 3 // 지도의 확대 레벨 (1부터 14까지 가능)
+                                };
+                            
+                                // 지도를 생성
+                                var map = new kakao.maps.Map(container, options);
+                            
+                                // 지도에 마커를 표시하는 예시 (선택 사항)
+                                var markerPosition = new kakao.maps.LatLng(37.22935437525413, 126.97293607845405);
+                                var marker = new kakao.maps.Marker({
+                                    position: markerPosition
+                                });
+                                marker.setMap(map);
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerBtm">
+                <div class="innerWrap">
+                    <div class="addr">
+                        <cite>(주)코리아토목</cite>
+                        <address>대표 : 이재혁 / 경기도 수원시 권선구 서수원로 63번길 181 / 전화 : <a href="tel:031-297-9800">031-297-9800</a></address>
+                        <address>사업자등록번호 : 124-87-00160 [사업자정보확인] / 통신판매업신고 : 제 수원권선-0140 호</address>
+                        <address>개인정보관리책임자 : 김교정 / 이메일 : <a href="javascript:">2979802@naver.com</a> 코리아토목-토목자재도매단가쇼핑몰.All rights reserved.</address>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./js/join.js"></script>
+</body>
+</html>

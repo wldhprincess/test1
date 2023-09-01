@@ -1,0 +1,305 @@
+@charset "utf-8";
+
+@import url(./style.css);
+@import url(./font.css);
+@import url(./layout.css);
+@import url(./all.css);
+
+.mainL label, .mainLBottom button, .mainRBtm span , .mainR button{
+    font-family: 'NanumSquareB', sans-serif;
+}
+.mainLBottom input.radioCheck{
+    font-family: 'NanumSquareEB', sans-serif;
+}
+.mainR table td, .agreement p, .mainLTop div.number, .mainLTop input, .mainLBottom input{
+    font-family: 'NanumSquareL', sans-serif;
+}
+
+.bestProductName, .mainLTop label, .mainLBottom label, .mainR table th, .mainRBtm div, .mainR p{
+    font-family: 'NanumSquareR', sans-serif;
+}
+
+
+
+
+.login img{
+    position: relative;
+    top: 6px;
+}
+
+main{
+    padding-top: 150px;
+}
+.bestProductName{
+    padding-bottom: 31px;
+    font-weight: normal;
+    letter-spacing: -1.1px;
+}
+.mainFlex{
+    display: flex;
+    justify-content: space-between  ;
+    margin-bottom: 112px;
+}
+.mainL{
+    width: 550px;
+}
+.mainL label{
+    font-weight: normal ;
+}
+.mainLTop, .mainLBottom{
+    border-top: 3px solid #000;
+}
+.mainLTop div, .mainLBottom div{
+    border-bottom: 1px solid #c9caca;
+    height: 50px;
+    line-height: 46px;
+}
+.mainLTop div:last-child{
+    border-bottom: 0;
+}
+.mainLBottom div:last-child{
+    border-bottom: 1px solid #000;
+}
+.mainLTop label, .mainLBottom label{
+    display: inline-block;
+    width: 140px;
+    letter-spacing: -.5px;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.mainLBottom label .labelWidth:first-child{
+    margin-left: 20px;
+    margin-right: 11px;
+}
+.mainLBottom label .labelWidth{
+    width: 70px;
+    padding-left: 0;
+    text-align: left;
+}
+.mainLBottom label .labelWidth.left{
+    margin-left: 0;
+    margin-right: 0;
+}
+.mainLBottom label.contents{
+    display: contents;
+}
+.mainLBottom .width70{
+    width: 130px;
+}
+.mainLTop input, .mainLBottom input{
+    width: 260px;
+    height: 30px;
+    border: none;
+    background: #f0f0f0;
+    margin: 10px 0;
+    font-family: 'NanumSquareL';
+    font-weight: bold;
+    padding-left: 14px;
+    font-size: 0.875em;
+}
+.mainLBottom input.radioCheck{
+    width:  20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 7px;
+}
+.mainLBottom input.radioCheck.radioCheckL{
+    margin-left: 0;
+}
+.mainLTop input:focus{
+    outline: 0;
+}
+.mainLBottom input:focus{
+    outline: 0;
+}
+.mainLTopBottom label{
+    display: block;
+}
+.mainLBottom button{
+    background: #000;
+    color: #fff;
+    width: 90px;
+    height: 32px;
+    border: none;
+    vertical-align: middle;
+    font-size: 0.875em;
+}
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #c9caca; 
+    border-radius: 50%;
+    outline: none;
+    background: #fff;
+}
+  
+
+input[type="radio"]:checked {
+    border-color: #004ea2; 
+    background-color: #fff; 
+    position: relative;
+}
+input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #004ea2;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+
+input[type="radio"] + label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 8px;
+}
+
+.postcode-container{
+    position: relative;
+
+}
+
+
+.mainR{
+    width: 815px;
+    border-top: 3px solid;
+}
+.mainR form{
+    position: relative;
+}
+.mainR table{
+    width: 100%;
+    border-bottom: 3px solid;
+}
+.mainR table tr td:first-child{
+    letter-spacing: -.5px;
+}
+.mainR table th{
+    border-bottom: 1px solid #000;
+    height: 50px;
+    vertical-align: middle;
+    font-size: 0.938em;
+    letter-spacing: -0.83px;
+    padding: 0 24px;
+}
+.mainR table td{
+    border-bottom: 1px solid #c9caca;
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.875em;
+    color: #313131;
+    font-weight: bold;
+}
+.mainR table td.color38{
+    border-bottom: 1px solid #c9caca;
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.875em;
+    color: #383838;
+}
+.mainR table td input{
+    width: 40px;
+    height: 25px;
+    border: 0;
+    text-align: center;
+    background: #f0f0f0;
+    margin-right: 5px;
+}
+.mainR table td input:focus{
+    outline: 0;
+}
+.mainR table td input:focus::placeholder{
+    color:transparent;
+}
+.mainRBtm{
+    height: 60px;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    line-height: 60px;
+    font-size: 1.563em;
+}
+.mainRBtm span{
+    letter-spacing: -0.88px;
+    color: #004ea2;
+}
+.mainR p{
+    height: 65px;
+    margin: 26px 0;
+    letter-spacing: -0.49px;
+    line-height: 1.79;
+    font-size: 0.875em;
+    color: #898989;
+}
+.mainR button{
+    width: 122px;
+    height: 43px;
+    background-color: #004ea2;
+    font-size: 0.875em;
+    color: #fff;
+    letter-spacing: -0.49px;
+    border: 0;
+}
+.mainR .RequestingShow{
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+}
+.mainLTop div.number{
+    border-bottom: 3px solid #000;
+    font-size: 0.875em;
+    font-weight: bold;
+}
+.mainLTop div.number span{
+    padding-left: 15px;
+}
+.custom-checkbox-label{
+    font-size: 15px;
+    margin-bottom: 16px;
+    display: flex;
+    width: 230px;
+    justify-content: space-between;
+    font-family: 'NanumSquareR', sans-serif !important;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold !important;
+    padding-top: 20px;
+}
+
+.custom-checkbox-label input[type="checkbox"] {
+    display: none; 
+}
+
+.checkbox-image {
+    position: absolute;
+    top: 17px;
+    left: 120px;
+    width: 20px; 
+    height: 20px; 
+    background-image: url('../img/checkbox.png'); 
+    background-size: contain; 
+
+}
+.custom-checkbox-label input[type="checkbox"]:checked + .checkbox-image {
+    background-image: url('../img/checked.png'); 
+}
+
+.agreement p{
+    font-size: 0.813em;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
