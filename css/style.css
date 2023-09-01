@@ -13,7 +13,7 @@ select,.concrete, h5, h3 ,.productBoxW ul li:hover a{
 h4, h6,  .search input, .btn3 button, .searchBottom p, .login a, .gradationborder, .searchBottom strong, .header .search td, .btn-select,.DepthPdName a ,.DepthPd p, .list-member button, .drawing button, .sigongHide{
     font-family: 'NanumSquareR', sans-serif;
 }
-.btnWrap button, .snsLogin button, .bannerButton button{
+.btnWrap button, .snsLogin button, .bannerButton button, .scrollNav ul li a.active{
     font-family: 'NanumSquareEB', sans-serif;
 }
 
@@ -57,12 +57,14 @@ h4, h6,  .search input, .btn3 button, .searchBottom p, .login a, .gradationborde
 
 
 /* jquery로 class추가 */
-.active{
-    background: #004ea2;
-    color: #fff;
+.scrollNav ul li a.active{
+    color: #004ea2;
+
 }
 
-
+.scrollNav ul li:last-child a.active {
+    letter-spacing: -2.1px;
+}
 
 .bestPrdWidth{
     position: relative;

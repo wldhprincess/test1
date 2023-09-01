@@ -4,7 +4,8 @@ $(function() {
 
     $(".scrollNav ul li").click(function() {
         let index = $(this).index();
-        $(this).toggleClass('.active');
+        $(this).find('a').addClass('active');
+        $(".scrollNav ul li").not(this).find('a').removeClass('active');
         let targetElement = $(".productsName").eq(index);
         $("html, body").animate({
             scrollTop: targetElement.offset().top
@@ -12,19 +13,10 @@ $(function() {
         $('.nav').hide();
     });
 
-    /* $(".scrollNav ul li").hover(function() {
-       
-        $(this).find('a').css('color','#004ea2')
-    }); */
-
-    $(".btnWrap button").click(function() {
-        let index = $(this).index();
-        $(this).toggleClass('.active');
-        let targetElement = $(".productsName").eq(index);
-        $("html, body").animate({
-            scrollTop: targetElement.offset().top
-        }, 800); 
-    });
+    $(".scrollNav ul li").mouseover(function(){
+        $(this).find('a').addClass('active');
+        $(".scrollNav ul li").not(this).find('a').removeClass('active');
+    })
     
 
 
@@ -44,159 +36,7 @@ $(function() {
 
 
 
-    /* var activePositionAb = null;
-
-    $('.nav > .innerWraper > ul > li > a').mouseover(function() {
-
-        var clickedLi = $(this).closest('li'); 
-        var positionAb = $(this).next('.positionAb');
-        $('.nav > .innerWraper > ul > li').not(clickedLi).removeClass('navClick');
-        $('.positionAb').hide();
-
-        if (activePositionAb !== positionAb.get(0)) {
-            clickedLi.addClass('navClick');
-            if (positionAb.length > 0) {
-                positionAb.show();
-                activePositionAb = positionAb.get(0);
-            }
-        } else {
-            activePositionAb = null;
-        }
-    });
-
-    var activePositionAbs = null;
-
-    $('.positionAb > li > a').mouseover(function() {
-
-        var clickedLi = $(this).closest('li');
-        var positionAbs = $(this).next('.positionAbs');
-
-        $('.positionAb > li').not(clickedLi).removeClass('navClick');
-        $('.positionAbs').hide();
-
-        if (activePositionAbs !== positionAbs.get(0)) {
-            clickedLi.addClass('navClick');
-            if (positionAbs.length > 0) {
-                positionAbs.show();
-                activePositionAbs = positionAbs.get(0);
-            }
-        } else {
-            activePositionAbs = null;
-        }
-    });
-    $('.positionAbs li a').mouseover(function(){
-    
-        // 이미 'navClick' 클래스가 있는 요소들로부터 해당 클래스 제거
-        $('.positionAbs li.navClick').removeClass('navClick');
-    
-        // 클릭한 링크의 부모 'li' 요소에 'navClick' 클래스 추가
-        $(this).closest('li').addClass('navClick');
-    });
-
-
-    var isNavHovered = false;  // nav 요소 위에 마우스가 있는지 여부를 나타내는 플래그
-    
-    // nav 요소에 마우스가 올라갔을 때와 벗어났을 때의 이벤트 처리
-    $('.navHide').mouseover(function() {
-        isNavHovered = true;
-        $('.navHide').show();
-    }).mouseleave(function() {
-        isNavHovered = false;
-        $('.navHide').hide();
-    });
-    $('.navShow').mouseover(function() {
-        isNavHovered = true;
-        $('.navShow').show();
-    }).mouseleave(function() {
-        isNavHovered = false;
-        $('.navShow').hide();
-    });
-    
-
-    $('#overflow').mouseover(function() {
-        $('.positionAbLeft').show();
-        $('#scrollMenu0').show();
-    })
-
-
-    
    
-    // .scrollNav ul a 요소에 마우스가 올라갔을 때의 이벤트 처리
-    $('.scrollNav .firstShow li').mouseover(function() {
-        $('.scrollNav .firstShow li').removeClass('scrollHeaderA');
-        $(this).addClass('scrollHeaderA');
-        $('.navHide').show();
-    });
-    $('.scrollNav .secoundShow li').mouseover(function() {
-        $('.navShow').show();
-    });
-    $('#scrollNavigation0').mouseover(function(){
-        
-        $('#scrollMenu1').hide();
-        $('#scrollMenu2').hide();
-        $('#scrollMenu3').hide();
-        $('#scrollMenu4').hide();
-        $('#scrollMenu0').show();
-    })
-    $('#scrollNavigation1').mouseover(function(){
-        $('#scrollMenu0').hide();
-        $('#scrollMenu2').hide();
-        $('#scrollMenu3').hide();
-        $('#scrollMenu4').hide();
-        $('#scrollMenu1').show();
-    })
-    $('#scrollNavigation2').mouseover(function(){
-        $('#scrollMenu0').hide();
-        $('#scrollMenu2').show();
-        $('#scrollMenu3').hide();
-        $('#scrollMenu4').hide();
-        $('#scrollMenu1').hide();
-    })
-    $('#scrollNavigation3').mouseover(function(){
-        $('#scrollMenu0').hide();
-        $('#scrollMenu2').hide();
-        $('#scrollMenu3').show();
-        $('#scrollMenu4').hide();
-        $('#scrollMenu1').hide();
-    })
-    $('#scrollNavigation4').mouseover(function(){
-        $('#scrollMenu0').hide();
-        $('#scrollMenu2').hide();
-        $('#scrollMenu3').hide();
-        $('#scrollMenu4').show();
-        $('#scrollMenu1').hide();
-    })
-    $('#scrollNavigation5').mouseover(function(){
-        $('#scrollMenu5').show();
-        $('#scrollMenu6').hide();
-        $('#scrollMenu7').hide();
-        $('#scrollMenu8').hide();
-    })
-    $('#scrollNavigation6').mouseover(function(){
-        $('#scrollMenu5').hide();
-        $('#scrollMenu6').show();
-        $('#scrollMenu7').hide();
-        $('#scrollMenu8').hide();
-    })
-    $('#scrollNavigation7').mouseover(function(){
-        $('#scrollMenu5').hide();
-        $('#scrollMenu6').hide();
-        $('#scrollMenu7').show();
-        $('#scrollMenu8').hide();
-    })
-    $('#scrollNavigation8').mouseover(function(){
-        $('#scrollMenu5').hide();
-        $('#scrollMenu6').hide();
-        $('#scrollMenu7').hide();
-        $('#scrollMenu8').show();
-    })
-
-    // .scrollNav ul a 요소에서 마우스가 벗어났을 때의 이벤트 처리
-    $('.scrollNav ul a').mouseleave(function() {
-        if (!isNavHovered) {
-            $('.nav').hide();
-        }
-    }); */
 
     $('#twoButtonToggle0').addClass('buttonBlue')
     $('.twoButton button').click(function(){
@@ -356,25 +196,75 @@ $(function() {
 
     
 
-    $('.innerWrap > ul > li').click(function() {
-        $(this).find('.positionAb').css('display', 'flex');
-        $('.innerWrap > ul > li').not(this).find('.positionAb').hide();
-    });
+    $('.positionAb').hide();
 
+// 2. .innerWrap > ul > li를 클릭했을 때 positionAb가 나타나도록 코드 수정
+$('.innerWrap > ul > li').click(function() {
+    // 숨겨져 있던 positionAb 표시
+    $(this).find('.positionAb').css('display', 'flex');
+    // 다른 모든 positionAb 숨김
+    $('.innerWrap > ul > li').not(this).find('.positionAb').hide();
 
-    $('.positionAb > li').click(function() {
-        if ($(this).find(".positionAbs").length > 0) {
-            $('.positionAb > li').siblings('.positionAb > li').not(this).hide();
-            $(this).find(".positionAbs").css('display', 'flex');
-        }
-    });
+    $(this).addClass('backgroundBlue');
+    $('.innerWrap > ul > li').not(this).removeClass('backgroundBlue');
+});
+
+// 3. 다른 innerWrap > ul > li를 클릭했을 때 기존에 열려있는 positionAb를 숨기고 새로 클릭한 요소의 positionAb만 표시되도록 코드 수정
+$('.positionAb > li').click(function() {
+    if ($(this).find(".positionAbs").length > 0) {
+        // 기존에 열려있던 positionAb 숨김
+        $(this).closest('.innerWrap > ul > li').find('.positionAb').hide();
+        // 새로 클릭한 요소의 positionAb 표시
+        $(this).find(".positionAbs").css('display', 'flex');
+    }
+});
     
     $('#scrollNavigation0').mouseover(function() {
         $('.nav.navHide').show();
         $('#scrollMenu0').css('display', 'flex');
+        $('#scrollMenu1').hide();
+        $('#scrollMenu2').hide();
+        $('#scrollMenu3').hide();
+        $('#scrollMenu4').hide();
+    });
+    $('#scrollNavigation1').mouseover(function() {
+        $('.nav.navHide').show();
+        $('#scrollMenu0').hide();
+        $('#scrollMenu1').css('display', 'flex');
+        $('#scrollMenu2').hide();
+        $('#scrollMenu3').hide();
+        $('#scrollMenu4').hide();
+    });
+    $('#scrollNavigation2').mouseover(function() {
+        $('.nav.navHide').show();
+        $('#scrollMenu0').hide();
+        $('#scrollMenu2').css('display', 'flex');
+        $('#scrollMenu1').hide();
+        $('#scrollMenu3').hide();
+        $('#scrollMenu4').hide();
+    });
+    $('#scrollNavigation3').mouseover(function() {
+        $('.nav.navHide').show();
+        $('#scrollMenu0').hide();
+        $('#scrollMenu3').css('display', 'flex');
+        $('#scrollMenu2').hide();
+        $('#scrollMenu1').hide();
+        $('#scrollMenu4').hide();
+    });
+    $('#scrollNavigation4').mouseover(function() {
+        $('.nav.navHide').show();
+        $('#scrollMenu0').hide();
+        $('#scrollMenu4').css('display', 'flex');
+        $('#scrollMenu2').hide();
+        $('#scrollMenu3').hide();
+        $('#scrollMenu1').hide();
     });
     
-   
+    $('.arrow').click(function (event) {
+        event.stopPropagation();
+        $(this).closest('.positionAbs').hide();
+        $('.positionAb > li').show();
+    });
 });
 
 

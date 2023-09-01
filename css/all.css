@@ -3,7 +3,7 @@
 @import url(./style.css);
 @import url(./font.css);
 
-.estimateTit p:nth-child(2), .estimate table,.totalL, .totalR span, .estimateTitPadding button, .estimateTitPadding input,.totalBtn button, .twoButton button, .scrollNav ul li a, .nav .innerWraper  ul  li a, .titleBox p, .lineHeight{
+.estimateTit p:nth-child(2), .estimate table,.totalL, .totalR span, .estimateTitPadding button, .estimateTitPadding input,.totalBtn button, .twoButton button, .scrollNav ul li a, .nav .innerWraper  ul  li a, .titleBox p, .lineHeight, .nav{
     font-family: 'NanumSquareR', sans-serif;
 }
 .red, .estimateTit span, .scrollNav ul li:hover a, .scrollNav ul li a.scrollHeaderA {
@@ -232,86 +232,246 @@
 .nav .innerWrap > ul{
     display: none;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 35px;
     position: absolute;
     width: 100%;
+    
 }
 
 .nav ul li .positionAb {
     display: none;
     position: absolute;
     width: 100%;
-    top: 160px;
-    background: #fff;
-    padding: 15px;
+    top: 210px;
+    background: #f4f4f4;
+    padding: 30px 22px;
     border-radius: 10px;
-    border: 1px solid #898989;
     left: 0;
     flex-wrap: wrap;
-    gap: 20px 33.5px;
+    gap: 20px 31.2px;
 }
 .nav ul li .positionAb li .positionAbs{
-    width: 1400px;
-    position: absolute;
-    left: -1px;
-    padding: 15px;
-    top: -1PX;
-    display: none;
-    background: #fff;
-    border-radius: 10px;
-    border: 1px solid #898989;
-    flex-wrap: wrap;
-    gap: 20px 33.5px;
+  width: 1400px;
+  position: absolute;
+  left: -1px;
+  padding: 30px 22px;
+  top: -1PX;
+  display: none;
+  background: #f4f4f4;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  gap: 20px 31.2px;
 }
+.nav ul li .positionAb li .positionAbs a{
+  font-size: 1em;
+}
+.nav ul li .positionAb li.emptyBox{
+  background: #f7f6f6;
+  border: 1px solid #ebebed;
+}
+
 .nav ul li .positionAb li{
   width: 200px;
   height: 50px;
   line-height: 50px;
   background: #fff;
   color: #000;
-  border-radius: 10px;
-  border: 1px solid #898989;
+  border-radius: 5px;
+  border: solid 1px #d5d5d5;
 }
 .nav ul li .positionAb li a{
   color: #000;
   font-size: 14px;
-  letter-spacing: -1px;
+  letter-spacing: -.88px;
+  
+  font-size: 1.000em;
 }
 .titleBox{
   display: none;
+}
+.button button{
+  border-radius: 5px;
+  width: 105px;
+  height: 50px;
+  border: 0;
+  background: #000;
+  color: #fff;
+  font-size: 1.000em;
+}
+.nav ul li .positionAbs li:first-child{
+  width: 100%;
+  background: #f4f4f4;
+  border: 0;
+}
+.button{
+  display: flex;
+}
+.button button:nth-child(2){
+  width: 200px;
+  height: 50px;
+  background-color: #004ea2;
+  margin-left: 4px  ;
+}
+.positionAbs:first-child{
+  display: block;
+}
+.nav .innerWrap > ul > li > a.downFont{
+  font-size: .77em;
 }
 
 
 
 .nav .innerWrap > ul > li{
-  width: 100px;
-  height: 100px;
+  width: 96px;
+  height: 96px;
   text-align: center;
-  background: #fff;
   border-radius: 50%;
-  border: 1px solid #898989;
+  background: #eeeeee url(../img/tool.png) no-repeat center;
+  background-size: 48px;
+}
+.nav .innerWrap > ul > li.backgroundBlue{
+  background: #004ea2 url(../img/tool1.png) no-repeat center;
+  background-size: 48px;
 }
 
 .nav .innerWrap > ul > li > a{
   color: #000;
-  letter-spacing: -1px;
+  letter-spacing: -.56px;
   font-size: 14px;
-  
   line-height: 100px;
+  position: relative;
+  top: 75px;
+  
+  font-size: 1.000em;
+}
+
+
+
+.positionAb::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid #f4f4f4;
+}
+.nav .innerWrap > ul#scrollMenu0 > li:nth-child(1) .positionAb::after {
+  left: 30px;
+}
+
+.nav .innerWrap > ul#scrollMenu0 > li:nth-child(2) .positionAb::after {
+  left: 195px;
+}
+
+.nav .innerWrap > ul#scrollMenu0 > li:nth-child(3) .positionAb::after {
+  left: 360px;
+}
+
+.nav .innerWrap > ul#scrollMenu0 > li:nth-child(4) .positionAb::after {
+  left: 520px;
+}
+
+.nav .innerWrap > ul#scrollMenu0 > li:nth-child(5) .positionAb::after {
+  left: 680px;
+}
+
+.nav .innerWrap > ul#scrollMenu0 > li:nth-child(6) .positionAb::after {
+  left: 845px;
+}
+
+.nav .innerWrap > ul#scrollMenu0 > li:nth-child(7) .positionAb::after {
+  left: 1010px;
+}
+
+.nav .innerWrap > ul#scrollMenu0 > li:nth-child(8) .positionAb::after {
+  left: 1175px;
+}
+
+.nav .innerWrap > ul#scrollMenu0 > li:nth-child(9) .positionAb::after {
+  left: 1340px;
 }
 
 
 
 
+.nav .innerWrap > ul#scrollMenu1 > li:nth-child(1) .positionAb::after, .nav .innerWrap > ul#scrollMenu4 > li:nth-child(1) .positionAb::after {
+  left: 30px;
+}
+
+.nav .innerWrap > ul#scrollMenu1 > li:nth-child(2) .positionAb::after, .nav .innerWrap > ul#scrollMenu4 > li:nth-child(2) .positionAb::after  {
+  left: 215px;
+}
+
+.nav .innerWrap > ul#scrollMenu1 > li:nth-child(3) .positionAb::after, .nav .innerWrap > ul#scrollMenu4 > li:nth-child(3) .positionAb::after  {
+  left: 400px;
+}
+
+.nav .innerWrap > ul#scrollMenu1 > li:nth-child(4) .positionAb::after, .nav .innerWrap > ul#scrollMenu4 > li:nth-child(4) .positionAb::after  {
+  left: 590px;
+}
+
+.nav .innerWrap > ul#scrollMenu1 > li:nth-child(5) .positionAb::after, .nav .innerWrap > ul#scrollMenu4 > li:nth-child(5) .positionAb::after  {
+  left: 775px;
+}
+
+.nav .innerWrap > ul#scrollMenu1 > li:nth-child(6) .positionAb::after, .nav .innerWrap > ul#scrollMenu4 > li:nth-child(6) .positionAb::after  {
+  left: 965px;
+}
+
+.nav .innerWrap > ul#scrollMenu1 > li:nth-child(7) .positionAb::after, .nav .innerWrap > ul#scrollMenu4 > li:nth-child(7) .positionAb::after  {
+  left: 1150px;
+}
+
+.nav .innerWrap > ul#scrollMenu1 > li:nth-child(8) .positionAb::after , .nav .innerWrap > ul#scrollMenu4 > li:nth-child(8) .positionAb::after {
+  left: 1340px;
+}
 
 
 
+  .nav .innerWrap > ul#scrollMenu2 > li:nth-child(1) .positionAb::after {
+    left: 30px;
+  }
+  
+  .nav .innerWrap > ul#scrollMenu2 > li:nth-child(2) .positionAb::after {
+    left: 290px;
+  }
+  
+  .nav .innerWrap > ul#scrollMenu2 > li:nth-child(3) .positionAb::after {
+    left: 550px;
+  }
+  
+  .nav .innerWrap > ul#scrollMenu2 > li:nth-child(4) .positionAb::after {
+    left: 815px;
+  }
+  
+  .nav .innerWrap > ul#scrollMenu2 > li:nth-child(5) .positionAb::after {
+    left: 1075px;
+  }
+  
+  .nav .innerWrap > ul#scrollMenu2 > li:nth-child(6) .positionAb::after {
+    left: 1340px;
+  }
+
+
+  
+  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(1) .positionAb::after {
+    left: 30px;
+  }
+  
+  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(2) .positionAb::after {
+    left: 685px;
+  }
+  
+  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(3) .positionAb::after {
+    left: 1340px;
+  }
 
 
 
-
-
-
+  .nav ul li .positionAb li a.downFont1{
+  font-size: .9em;
+}
 
 
 
