@@ -231,11 +231,12 @@
 }
 .nav .innerWrap > ul{
     display: none;
-    justify-content: space-between;
     padding-top: 35px;
     position: absolute;
     width: 100%;
-    
+    gap: 67px;
+    justify-content: center;
+
 }
 
 .nav ul li .positionAb {
@@ -318,6 +319,9 @@
 .nav .innerWrap > ul > li > a.downFont{
   font-size: .77em;
 }
+.nav .innerWrap > ul > li > a.downFont3{
+  font-size: .9em;
+}
 
 
 
@@ -396,76 +400,108 @@
 
 
 .nav .innerWrap > ul#scrollMenu1 > li:nth-child(1) .positionAb::after, .nav .innerWrap > ul#scrollMenu4 > li:nth-child(1) .positionAb::after {
-  left: 30px;
+  left: 115px;
 }
 
 .nav .innerWrap > ul#scrollMenu1 > li:nth-child(2) .positionAb::after, .nav .innerWrap > ul#scrollMenu4 > li:nth-child(2) .positionAb::after  {
-  left: 215px;
+  left: 275px;
 }
 
 .nav .innerWrap > ul#scrollMenu1 > li:nth-child(3) .positionAb::after, .nav .innerWrap > ul#scrollMenu4 > li:nth-child(3) .positionAb::after  {
-  left: 400px;
+  left: 440px;
 }
 
 .nav .innerWrap > ul#scrollMenu1 > li:nth-child(4) .positionAb::after, .nav .innerWrap > ul#scrollMenu4 > li:nth-child(4) .positionAb::after  {
-  left: 590px;
+  left: 600px;
 }
 
 .nav .innerWrap > ul#scrollMenu1 > li:nth-child(5) .positionAb::after, .nav .innerWrap > ul#scrollMenu4 > li:nth-child(5) .positionAb::after  {
-  left: 775px;
+  left: 765px;
 }
 
 .nav .innerWrap > ul#scrollMenu1 > li:nth-child(6) .positionAb::after, .nav .innerWrap > ul#scrollMenu4 > li:nth-child(6) .positionAb::after  {
-  left: 965px;
+  left: 925px;
 }
 
 .nav .innerWrap > ul#scrollMenu1 > li:nth-child(7) .positionAb::after, .nav .innerWrap > ul#scrollMenu4 > li:nth-child(7) .positionAb::after  {
-  left: 1150px;
+  left: 1095px;
 }
 
 .nav .innerWrap > ul#scrollMenu1 > li:nth-child(8) .positionAb::after , .nav .innerWrap > ul#scrollMenu4 > li:nth-child(8) .positionAb::after {
-  left: 1340px;
+  left: 1260px;
 }
 
 
 
   .nav .innerWrap > ul#scrollMenu2 > li:nth-child(1) .positionAb::after {
-    left: 30px;
+    left: 275px;
   }
   
   .nav .innerWrap > ul#scrollMenu2 > li:nth-child(2) .positionAb::after {
-    left: 290px;
+    left: 440px;
   }
   
   .nav .innerWrap > ul#scrollMenu2 > li:nth-child(3) .positionAb::after {
-    left: 550px;
+    left: 600px;
   }
   
   .nav .innerWrap > ul#scrollMenu2 > li:nth-child(4) .positionAb::after {
-    left: 815px;
+    left: 765px;
   }
   
   .nav .innerWrap > ul#scrollMenu2 > li:nth-child(5) .positionAb::after {
-    left: 1075px;
+    left: 925px;
   }
   
   .nav .innerWrap > ul#scrollMenu2 > li:nth-child(6) .positionAb::after {
-    left: 1340px;
+    left: 1095px;
   }
 
 
   
-  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(1) .positionAb::after {
-    left: 30px;
+  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(1) .positionAb::after, .nav .innerWrap > ul#scrollMenu5 > li:nth-child(1) .positionAb::after , .nav .innerWrap > ul#scrollMenu8 > li:nth-child(1) .positionAb::after{
+    left: 520px;
   }
   
-  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(2) .positionAb::after {
+  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(2) .positionAb::after, .nav .innerWrap > ul#scrollMenu5 > li:nth-child(2) .positionAb::after,  .nav .innerWrap > ul#scrollMenu6 > li:nth-child(1) .positionAb::after, .nav .innerWrap > ul#scrollMenu8 > li:nth-child(2) .positionAb::after{
     left: 685px;
   }
   
-  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(3) .positionAb::after {
-    left: 1340px;
+  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(3) .positionAb::after, .nav .innerWrap > ul#scrollMenu5 > li:nth-child(3) .positionAb::after, .nav .innerWrap > ul#scrollMenu8 > li:nth-child(3) .positionAb::after {
+    left: 845px;
   }
+
+
+
+  .nav .innerWrap > ul#scrollMenu7 > li:nth-child(1) .positionAb::after {
+    left: 195px;
+  }
+  
+  .nav .innerWrap > ul#scrollMenu7 > li:nth-child(2) .positionAb::after {
+    left: 355px;
+  }
+  
+  .nav .innerWrap > ul#scrollMenu7 > li:nth-child(3) .positionAb::after {
+    left: 525px;
+  }
+  
+  .nav .innerWrap > ul#scrollMenu7 > li:nth-child(4) .positionAb::after {
+    left: 685px;
+  }
+  
+  .nav .innerWrap > ul#scrollMenu7 > li:nth-child(5) .positionAb::after {
+    left: 845px;
+  }
+  
+  .nav .innerWrap > ul#scrollMenu7 > li:nth-child(6) .positionAb::after {
+    left: 1015px;
+  }
+  .nav .innerWrap > ul#scrollMenu7 > li:nth-child(7) .positionAb::after {
+    left: 1175px;
+  }
+
+
+
 
 
 

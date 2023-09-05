@@ -1,6 +1,19 @@
-var rightClick = false;
+// TODO : 검토 후 삭제
+// var rightClick = false;
 $(function() {
 
+    var scrollHeader = $('.scrollHeader');
+    var scrollPosition = scrollHeader.offset().top;
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() >= scrollPosition) {
+            scrollHeader.addClass('fixed');
+            scrollHeader.css('border-bottom', '1px solid #c9c9c9')
+        } else {
+            scrollHeader.removeClass('fixed');
+            scrollHeader.css('border-bottom', '0')
+        }
+    });
 
     $(".scrollNav ul li").click(function() {
         let index = $(this).index();
@@ -21,117 +34,136 @@ $(function() {
 
 
 
-    var scrollHeader = $('.scrollHeader');
-    var scrollPosition = scrollHeader.offset().top;
-
-    $(window).scroll(function() {
-        if ($(window).scrollTop() >= scrollPosition) {
-            scrollHeader.addClass('fixed');
-            scrollHeader.css('border-bottom', '1px solid #c9c9c9')
-        } else {
-            scrollHeader.removeClass('fixed');
-            scrollHeader.css('border-bottom', '0')
-        }
-    });
-
-
-
-   
-
-    $('#twoButtonToggle0').addClass('buttonBlue')
-    $('.twoButton button').click(function(){
-        $(this).addClass('buttonBlue');
-        $('.twoButton button').not($(this)).removeClass('buttonBlue')
-    })
-
-    $('#twoButtonToggle0').click(function(){
-        console.log('hi')
-        $('.secoundShow').hide();
-        $('.firstShow').css('display', 'flex');
-    })
-    $('#twoButtonToggle1').click(function(){
-        console.log('hi')
-        $('.firstShow').hide();
-        $('.secoundShow').css('display', 'flex');
-    })
-
-
-
-// *********************** 도면보기 click *********************** //
-    $('.drawingShow').click(function() {
-        var $closestBestPrdWidth = $(this).closest('.bestPrdWidth');
-        
-        var isDrawingVisible = $closestBestPrdWidth.find('.drawing:visible').length > 0;
-        
-      
-        $('.drawing:visible').hide();
-        
-        
-        if (!isDrawingVisible || !$closestBestPrdWidth.is('.drawingShow')) {
-            $closestBestPrdWidth.find('.drawing').show();
-        }
-    });
     
-    $('.drawingHide').click(function() {
-        $(this).closest('.drawing').hide();
+
+    // 메인메뉴 소재별품목|용도별품목 스위칭
+    $('button[data-kt-btn-selectCategory]').click(function() {
+        let currentCategoryName = $(this).attr("data-kt-btn-selectCategory");
+        $(this).addClass('buttonBlue').siblings().removeClass('buttonBlue');
+        $("ul[data-kt-btn-showCategoryMenuMain="+currentCategoryName+"]").css('display','flex').siblings().hide();
+        $('[data-kt-btn-showcategorymenufirst]').hide();
+
+        // load html
+        $('#mainProductGroup')
+            .load(
+                'indexMainProduct'
+                +(currentCategoryName.charAt(0).toUpperCase() 
+                + currentCategoryName.slice(1))
+                + '.html'
+                , callback_fn_aside);
+    });
+    // 메인메뉴 마우스오버시 First 메뉴 처리
+    $('ul[data-kt-btn-showCategoryMenuMain]').each(function(idx) {
+        $('a', this).each(function(idx) {
+            // 현재 카테고리 이름 가져오기
+            let currentCategoryName = 
+                $(this).parents('ul[data-kt-btn-showCategoryMenuMain]')
+                .first()
+                .attr("data-kt-btn-showCategoryMenuMain");
+
+            // 각 메인메뉴 마우스오버 UI 처리
+            $(this).on('mouseover', function(e) {
+                // 현재 메인메뉴의 first 영역
+                $("div[data-kt-btn-showCategoryMenuFirst="+currentCategoryName+"]").show()
+                    .siblings('[data-kt-btn-showCategoryMenuFirst]').hide();
+
+
+                // 현재 메인메뉴에 마우스오버시 첫번째 항목 초기값 설정
+                $('div > ul', "div[data-kt-btn-showCategoryMenuFirst="+currentCategoryName+"]").eq(idx)
+                .find('li:eq(0)').addClass('backgroundBlue').siblings().removeClass('backgroundBlue')
+                .end()
+                .find('.positionAb:eq(0)').css('display', 'flex')
+                .end().siblings().find('.positionAb').hide()
+                ;
+
+                // 현재 메인메뉴의 First 내의 메뉴
+                $('div > ul', "div[data-kt-btn-showCategoryMenuFirst="+currentCategoryName+"]").eq(idx)
+                .css('display', 'flex')
+                .siblings().hide()
+                ;
+            });
+
+            // 
+            $('div > ul', "div[data-kt-btn-showCategoryMenuFirst="+currentCategoryName+"]").eq(idx)
+            .children().on('mouseover', function() {
+                $(this).addClass('backgroundBlue').siblings().removeClass('backgroundBlue');
+                $(this).find('.positionAb').css('display', 'flex')
+                    .end().siblings().find('.positionAb').hide();
+            });
+
+            // 상태
+            $('.positionAb li a', "div[data-kt-btn-showCategoryMenuFirst="+currentCategoryName+"]").on('click', function() {
+                var positionAbs = $(this).parent().find('.positionAbs');
+                
+                if (positionAbs.length > 0) {
+                    positionAbs.css('display', 'flex');
+                    $(this).parent().siblings().hide();
+                }
+            });
+            
+            // 이벤트
+            $('button.arrow', "div[data-kt-btn-showCategoryMenuFirst="+currentCategoryName+"]").on('click', function() {
+                var positionAbs = $(this).parents('.positionAbs');
+                
+                if (positionAbs.length > 0) {
+                    positionAbs.hide();
+                    $(this).parents('.positionAb li').siblings().show();
+                }
+            });
+
+        });
     });
 
+    // a-side 메뉴 마우스 호버 처리
+    const callback_fn_aside = function() {
+        $('aside li').on('mouseover', function(e) {
+            // 
+            $(this).addClass('listHover')
+                .siblings().removeClass('listHover');
+            //
+            $(this).find('a').addClass('listHoverA')
+                .end().siblings().find('a').removeClass('listHoverA');
+
+        }).on('click', function() {
+            let currentAsideName = $(this).children().attr("data-kt-aside-path");
+            let productWrapBox   = $(this).parent().parent().parent().find('div[data-kt-productWrapBox]');
+            let productWrapBoxIdx = productWrapBox.attr('data-kt-productWrapBox');
+
+            productWrapBox.load(
+                'main_aside/'
+                + currentAsideName
+                + '.html'
+                // a-side 메뉴 클릭 후 제품 리스트 이벤트
+                , function() {
+                    $('button[data-kt-btn-product-detail]', productWrapBox).on('click', function() {
+                        let attr = $(this).attr('data-kt-btn-product-detail');
+                        if (attr == 'drawing' || attr == 'sigong') {
+                            if ($('.drawing:visible').length) $('.drawing:visible').hide();
+                            if ($('.sigong:visible').length) $('.sigong:visible').hide();
+                            $(this).closest('.bestPrdWidth').find('.'+attr).show();
+                        }
+                        else if (attr == 'list') {
+                            location.href='product.html';
+                        }
+                    });
+                    $('button.drawingHide, button.sigongHide', productWrapBox).on( "click", function(){
+                        $(this).closest('.drawing, .sigong').hide();
+                    });
+                }
+            );
+        });
+
+        // 최초 로딩시 기본값
+        $('aside').each(function(idx) {
+            $('li:eq(0)', $(this)).trigger('click');
+        });
+    };
+
+    // initialize
+    $('button[data-kt-btn-selectCategory=material]').trigger('click');
 
 
-
-
-
-
-
-
-// *********************** 시공사진보기 click *********************** //
-    $('.sigongShow').click(function() {
-
-        console.log('hi');
-        var $closestBestPrdWidth = $(this).closest('.bestPrdWidth');
-        
-        var isDrawingVisible = $closestBestPrdWidth.find('.sigong:visible').length > 0;
-        
-
-        
-        $('.sigong:visible').hide();
-        
-       
-        if (!isDrawingVisible || !$closestBestPrdWidth.is('.sigongShow')) {
-            $closestBestPrdWidth.find('.sigong').show();
-        }
-    });
     
-    $('.sigongHide').click(function() {
-        $(this).closest('.sigong').hide();
-    });
-
-
-
-
-
-
-
-   
-
-    $('.marginN').click(function(){
-        if($('.login a').attr('id') == "login"){
-            location.href = 'product.html'
-        } else if($('.login a').attr('id') == "logout"){
-            location.href = 'productLog.html'
-        }
-    })
-
-    $('.imgBox').click(function(){
-        if($('.login a').attr('id') == "login"){
-            location.href = 'productDetails.html'
-        } else if($('.login a').attr('id') == "logout"){
-            location.href = 'productDetailsLog.html'
-        }
-    })
-
-
-
     $('.purchase, .add').click(function(){
         $('.estimate').show();
     })
@@ -156,23 +188,27 @@ $(function() {
 
     
 
-    
-  closeBtn = $('.estimateTit .closeBtn');
-    
-  closeBtn.click(function(){
-      $('.estimate').hide();
-  })
+    //로그인 메인 페이지 재구매
 
-  $('.print').click(function(){
-      location.href = 'print.html'
-  })
-  $('.expense').click(function(){
-    if($('.paddingT input').val() == ''){
-        alert("주소를 먼저 입력해 주세요");
-    }else{
-        $('.inlineBlock').show();
-        $(this).addClass('expenseColor');
-    }
+    
+
+
+    closeBtn = $('.estimateTit .closeBtn');
+        
+    closeBtn.click(function(){
+        $('.estimate').hide();
+    })
+
+    $('.print').click(function(){
+        location.href = 'print.html'
+    })
+    $('.expense').click(function(){
+        if($('.paddingT input').val() == ''){
+            alert("주소를 먼저 입력해 주세요");
+        }else{
+            $('.inlineBlock').show();
+            $(this).addClass('expenseColor');
+        }
     })
 
     $('#checkbox0').click(function() {
@@ -196,75 +232,6 @@ $(function() {
 
     
 
-    $('.positionAb').hide();
-
-// 2. .innerWrap > ul > li를 클릭했을 때 positionAb가 나타나도록 코드 수정
-$('.innerWrap > ul > li').click(function() {
-    // 숨겨져 있던 positionAb 표시
-    $(this).find('.positionAb').css('display', 'flex');
-    // 다른 모든 positionAb 숨김
-    $('.innerWrap > ul > li').not(this).find('.positionAb').hide();
-
-    $(this).addClass('backgroundBlue');
-    $('.innerWrap > ul > li').not(this).removeClass('backgroundBlue');
-});
-
-// 3. 다른 innerWrap > ul > li를 클릭했을 때 기존에 열려있는 positionAb를 숨기고 새로 클릭한 요소의 positionAb만 표시되도록 코드 수정
-$('.positionAb > li').click(function() {
-    if ($(this).find(".positionAbs").length > 0) {
-        // 기존에 열려있던 positionAb 숨김
-        $(this).closest('.innerWrap > ul > li').find('.positionAb').hide();
-        // 새로 클릭한 요소의 positionAb 표시
-        $(this).find(".positionAbs").css('display', 'flex');
-    }
-});
-    
-    $('#scrollNavigation0').mouseover(function() {
-        $('.nav.navHide').show();
-        $('#scrollMenu0').css('display', 'flex');
-        $('#scrollMenu1').hide();
-        $('#scrollMenu2').hide();
-        $('#scrollMenu3').hide();
-        $('#scrollMenu4').hide();
-    });
-    $('#scrollNavigation1').mouseover(function() {
-        $('.nav.navHide').show();
-        $('#scrollMenu0').hide();
-        $('#scrollMenu1').css('display', 'flex');
-        $('#scrollMenu2').hide();
-        $('#scrollMenu3').hide();
-        $('#scrollMenu4').hide();
-    });
-    $('#scrollNavigation2').mouseover(function() {
-        $('.nav.navHide').show();
-        $('#scrollMenu0').hide();
-        $('#scrollMenu2').css('display', 'flex');
-        $('#scrollMenu1').hide();
-        $('#scrollMenu3').hide();
-        $('#scrollMenu4').hide();
-    });
-    $('#scrollNavigation3').mouseover(function() {
-        $('.nav.navHide').show();
-        $('#scrollMenu0').hide();
-        $('#scrollMenu3').css('display', 'flex');
-        $('#scrollMenu2').hide();
-        $('#scrollMenu1').hide();
-        $('#scrollMenu4').hide();
-    });
-    $('#scrollNavigation4').mouseover(function() {
-        $('.nav.navHide').show();
-        $('#scrollMenu0').hide();
-        $('#scrollMenu4').css('display', 'flex');
-        $('#scrollMenu2').hide();
-        $('#scrollMenu3').hide();
-        $('#scrollMenu1').hide();
-    });
-    
-    $('.arrow').click(function (event) {
-        event.stopPropagation();
-        $(this).closest('.positionAbs').hide();
-        $('.positionAb > li').show();
-    });
 });
 
 

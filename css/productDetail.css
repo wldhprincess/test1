@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    padding-bottom: 23px;}
+    padding-bottom: 50px;}
 
 .viewDetailsbottomRFlex span{
     padding-right: 5px;
@@ -117,7 +117,7 @@
 .custom-checkbox-label{
     font-size: 15px;
     display: flex;
-    width: 20px;
+    width: 15px;
     justify-content: space-between;
     font-family: 'NanumSquareR', sans-serif !important;
     position: relative;
@@ -134,10 +134,10 @@
 
 .checkbox-image {
     position: absolute;
-    top: 1px;
+    top: 3px;
     left: 0;
-    width: 20px; 
-    height: 20px; 
+    width: 15px; 
+    height: 15px; 
     background-image: url('../img/checkbox.png'); 
     background-size: contain; 
 

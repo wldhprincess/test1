@@ -353,10 +353,10 @@ aside span{
    padding-left: 20px;
    margin-bottom: 20px;
 }
-.productBoxW ul li:hover{
+.productBoxW ul li.listHover{
     background: #004ea2;
 }
-.productBoxW ul li:hover a{
+.productBoxW ul li a.listHoverA{
     color: #fff;
 }
 .productBoxW a{

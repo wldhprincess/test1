@@ -18,13 +18,13 @@ $(function(){
   var oneDepthIndex = 0;
 
   $('.secoudDepth.selected').show().siblings('a').addClass('selected');
-  $('.firstDepth > li').mouseover(function() {
-      $(this).find('a').addClass('selected');
-      $(this).find('.secoudDepth').show();
+  $('.firstDepth > li > a').mouseover(function() {
+      $(this).addClass('selected');
+      $(this).parent().find('.secoudDepth').show();
       
       // 다른 항목의 'selected' 클래스 제거 및 하위 메뉴 숨기기
-      $(this).siblings().find('a').removeClass('selected');
-      $(this).siblings().find('.secoudDepth').hide();
+      $('.firstDepth > li > a').not($(this)).removeClass('selected');
+      $('.firstDepth > li > a').not($(this)).parent().find('.secoudDepth').hide();
 
       //현재 인덱스 
       oneDepthIndex = $(this).index();
@@ -184,5 +184,7 @@ $('.expense').click(function(){
   $('.print').click(function(){
     location.href = 'print.html'
 })
+
+
 
 })

@@ -7,7 +7,7 @@
 h1,h2, .marginTop, aside, .bestProductName{
     font-family: 'NanumSquareL', sans-serif;
 }
-select,.concrete, h5, h3 ,.productBoxW ul li:hover a{
+select,.concrete, h5, h3 ,.productBoxW ul li a.listHoverA{
     font-family: 'NanumSquareB', sans-serif;
 }
 h4, h6,  .search input, .btn3 button, .searchBottom p, .login a, .gradationborder, .searchBottom strong, .header .search td, .btn-select,.DepthPdName a ,.DepthPd p, .list-member button, .drawing button, .sigongHide{
@@ -53,6 +53,9 @@ h4, h6,  .search input, .btn3 button, .searchBottom p, .login a, .gradationborde
 }
 .searchBottom strong{
     font-weight: bold;
+}
+.nav .innerWrap > ul > li > a.downFont2{
+    font-size: .85em;
 }
 
 
