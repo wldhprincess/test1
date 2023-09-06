@@ -61,8 +61,12 @@ $(function(){
     });
 
 
-    $('.kakao, .naver, .google, .submit').click(function(){
+    $('.kakao, .submit').click(function(){
         location.href = 'loginMain.html'
+    })
+
+    $('.naver').click(function(){
+        location.href = 'loginMainNaver.html'
     })
     $('.easySignUp').click(function(){
         location.href = 'join.html';

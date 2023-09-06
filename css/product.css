@@ -5,15 +5,12 @@
 @import url(./layout.css);
 @import url(./all.css);
 
-.selectBoxItem .bestProduct input,.selectBoxItem .bestProduct .W150  button, .productName, .selectBoxItem .borderBottom input, .selectBoxItem .bestProduct table .W710 span, .W100 button, .selectBoxItem .bestProduct .W150 button{
+.selectBoxItem .bestProduct input,.selectBoxItem .bestProduct .W150  button, .productName, .selectBoxItem .borderBottom input, .selectBoxItem .bestProduct table .W710 span, .W100 button, .selectBoxItem .bestProduct .W150 button, .choiceBtn button{
     font-family: 'NanumSquareR', sans-serif;
 }
 
 .tabMenu p, .firstDepth > li > a.selected, .secoudDepth > li > .select, .selectItem .selectColor{
     font-family: 'NanumSquareEB', sans-serif;
-}
-.choiceBtn button{
-    font-family: 'NanumSquareB', sans-serif;
 }
  .classifyRName h1, .classifyRName h2, .selectBoxItem .bestProduct .background tr th, .productNavigation, .selectItem li a,.selectBoxItem .bestProduct table td .selectBoxItem , .selectBoxItem .bestProduct table td, .selectBoxItem .bestProduct table th,.selectBoxItem .bestProduct table .height55 td, .selectBoxItem .bestProduct table .height45, .buttoncheckBox button, .tabWrap button{
     font-family: 'NanumSquareL', sans-serif;
@@ -33,9 +30,13 @@
     height: 100%;
     position: absolute;
 }
+.classifyHide{
+    display: none;
+}
 .choiceBtn{
     padding-top: 20px;
     position: absolute;
+    z-index: 23;
 }
 .choiceBtn button{
     width: 93px;
@@ -256,8 +257,8 @@ width: 270px;
     right: -55px;
     top: -66px;
 }
-.swiper-backface-hidden .swiper-slide{
-    width: 85px !important; 
+.swiper-backface-hidden .swiper-slide, .productsGrop{
+    width: 84px !important; 
 }
 .swiper-button-next, .swiper-button-prev{
     color: #004ea2 !important;

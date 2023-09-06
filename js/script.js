@@ -54,7 +54,7 @@ $(function() {
     });
     // 메인메뉴 마우스오버시 First 메뉴 처리
     $('ul[data-kt-btn-showCategoryMenuMain]').each(function(idx) {
-        $('a', this).each(function(idx) {
+        $('li', this).each(function(idx) {
             // 현재 카테고리 이름 가져오기
             let currentCategoryName = 
                 $(this).parents('ul[data-kt-btn-showCategoryMenuMain]')
@@ -230,7 +230,65 @@ $(function() {
         $('#checkbox0').prop('checked', allChecked);
     });
 
+
     
+
+
+    $('.scrollNav > ul').mouseout(function() {
+        $('.nav').hide();
+    })
+
+    $('.nav .innerWrap').mouseover(function(){
+        $(this).parent('.nav').show();
+    })
+    $('.nav .innerWrap').mouseout(function(){
+        $(this).parent('.nav').hide();
+    })
+
+
+    $('.normal > ul > li').click(function(){
+        if($(this).find('.positionAbs').length){
+            return false;
+        } else {
+        location.href = 'productDetailsMain.html'
+        }
+    })
+    $('.additional  > ul > li').click(function() {
+        if($(this).find('.positionAbs').length){
+            return false;
+        } else {
+        location.href = 'productDetailsPage.html'
+        }
+    })
+    $('.addColor  > ul > li').click(function() {
+        if($(this).find('.positionAbs').length){
+            return false;
+        } else {
+            location.href = 'productDetails.html'
+        }
+    })
+
+
+    $('.normal .positionAbs li').click(function(){
+        location.href = 'productDetailsMain.html'
+    })
+    $('.additional  .positionAbs li').click(function() {
+        location.href = 'productDetailsPage.html'
+    })
+    $('.addColor  .positionAbs li').click(function() {
+            location.href = 'productDetails.html'
+    })
+
+
+
+
+
+
+
+
+
+
+
 
 });
 

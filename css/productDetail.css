@@ -162,8 +162,10 @@
     justify-content: right;
     gap: 16px;
 }
-.twoBtn{
-    top: 110px;
+.bottomBox{
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 .mainPhoto{
     background: url(../img/productDetails5.png) no-repeat center;

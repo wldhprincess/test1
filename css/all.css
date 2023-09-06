@@ -136,7 +136,7 @@
 }
 .twoButton{
     position: absolute;
-    top: 30px;
+    top: 20px;
     z-index: 22;
     display: flex;
 }
@@ -151,7 +151,7 @@
     text-align: center;
     letter-spacing: -0.77px;
     font-size: 14px;
-    margin-right: 3px;
+    margin-right: 4px;
 
 }
 .twoButton button.buttonBlue{
@@ -171,6 +171,7 @@
     justify-content: space-between;
     position: absolute;
     width: 750px;
+    top: -7px;
 }
 .scrollNav ul li a{
     color: #000;
@@ -181,7 +182,11 @@
 .scrollNav ul li:hover a{
     color: #004ea2;
 }
-.scrollNav ul li:last-child{
+.scrollNav ul li{
+  width: 108px;
+  text-align: center;
+}
+/* .scrollNav ul li:last-child{
     width: 67px;
     text-align: right;
     padding: 0;
@@ -190,7 +195,7 @@
     width: 108px;
     text-align: right;
     padding: 0;
-}
+} */
 .scrollNav ul.secoundShow{
     display: none;
 }
@@ -222,9 +227,7 @@
     height: 465px;
     position: absolute;
     width: 100%;
-}
-.nav{
-    display: none;
+    top: 70px;
 }
 .nav .innerWrap{
   position: relative;
@@ -459,46 +462,33 @@
 
 
   
-  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(1) .positionAb::after, .nav .innerWrap > ul#scrollMenu5 > li:nth-child(1) .positionAb::after , .nav .innerWrap > ul#scrollMenu8 > li:nth-child(1) .positionAb::after{
+  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(1) .positionAb::after, .nav .innerWrap > ul#scrollMenu5 > li:nth-child(1) .positionAb::after {
     left: 520px;
   }
   
-  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(2) .positionAb::after, .nav .innerWrap > ul#scrollMenu5 > li:nth-child(2) .positionAb::after,  .nav .innerWrap > ul#scrollMenu6 > li:nth-child(1) .positionAb::after, .nav .innerWrap > ul#scrollMenu8 > li:nth-child(2) .positionAb::after{
+  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(2) .positionAb::after, .nav .innerWrap > ul#scrollMenu5 > li:nth-child(2) .positionAb::after,  .nav .innerWrap > ul#scrollMenu6 > li:nth-child(1) .positionAb::after{
     left: 685px;
   }
   
-  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(3) .positionAb::after, .nav .innerWrap > ul#scrollMenu5 > li:nth-child(3) .positionAb::after, .nav .innerWrap > ul#scrollMenu8 > li:nth-child(3) .positionAb::after {
+  .nav .innerWrap > ul#scrollMenu3 > li:nth-child(3) .positionAb::after, .nav .innerWrap > ul#scrollMenu5 > li:nth-child(3) .positionAb::after{
     left: 845px;
   }
 
 
 
   .nav .innerWrap > ul#scrollMenu7 > li:nth-child(1) .positionAb::after {
-    left: 195px;
+    left: 600px;
   }
   
   .nav .innerWrap > ul#scrollMenu7 > li:nth-child(2) .positionAb::after {
-    left: 355px;
+    left: 765px;
   }
-  
-  .nav .innerWrap > ul#scrollMenu7 > li:nth-child(3) .positionAb::after {
-    left: 525px;
-  }
-  
-  .nav .innerWrap > ul#scrollMenu7 > li:nth-child(4) .positionAb::after {
+
+
+  .nav .innerWrap > ul#scrollMenu8 > li:nth-child(1) .positionAb::after{
     left: 685px;
   }
   
-  .nav .innerWrap > ul#scrollMenu7 > li:nth-child(5) .positionAb::after {
-    left: 845px;
-  }
-  
-  .nav .innerWrap > ul#scrollMenu7 > li:nth-child(6) .positionAb::after {
-    left: 1015px;
-  }
-  .nav .innerWrap > ul#scrollMenu7 > li:nth-child(7) .positionAb::after {
-    left: 1175px;
-  }
 
 
 
@@ -541,6 +531,9 @@
     top: 90px;
     text-align: center;
 }
+.menu.menuMargin{
+  margin-bottom: 110px;
+}
 .menu h1{
     letter-spacing: -1.98px;
     font-size: 2.250em;
@@ -548,6 +541,7 @@
 }
 .menu h1 span{
     color: #004ea2;
+    font-weight: bold;
 }
 .menu h2{
     color: #898989;

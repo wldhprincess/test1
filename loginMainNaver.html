@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>견적서 요청현황</title>
+    <title>코리아토목 사용자</title>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/requesting.css">
+    <link rel="stylesheet" href="./css/loginMain.css">
 </head>
 <body>
     <div id="wrap">
@@ -13,7 +13,7 @@
             <div class="innerWrap">
                 <div class="headerWrap">
                     <div class="logo">
-                        <a href="./loginMain.html">
+                        <a href="javascript:">
                             <img src="./img/logo.png" alt="코리아토목 logo"> 
                         </a>
                     </div>
@@ -30,12 +30,13 @@
                         </table>
                     </div>
                     <div class="login">
-                        <a href="./index.html">로그아웃</a>
-                        <a href="javascript:">견적요청현황 <img src="./img/new.png" alt=""></a>
+                        <a href="./index.html" id="logout">로그아웃</a>
+                        <a href="./requesting.html">견적요청현황</a>
                         <a href="./order.html">발주현황</a>
                     </div>
                 </div>
             </div>
+            
         </header>
         <nav>
             <div class="scrollHeader">
@@ -4865,60 +4866,15 @@
                 </div>
             </div>
         </nav>
-        <section class="menu">
+        <section class="menu menuMargin">
             <div class="innerWrap">
                 <h1>토목자재 제조 전문기업 <span>코리아토목</span></h1>
                 <h2>검색에서 주문까지 누구나 쉽고 빠르게 완료 할 수 있는 토목자재 유통 전문 온라인 서비스 입니다.</h2>
             </div>
         </section>
-        <main>
-            <div class="innerWrap">
-                <div class="bestProductName">
-                    <span>
-                        <img src="./img/circle.png" alt="circle">
-                    </span>
-                    견적 요청현황
-                </div>
-                <table>
-                    <tr>
-                        <th>견적서 일련번호</th>
-                        <th>요청일</th>
-                        <th>품목명</th>
-                        <th>규격</th>
-                        <th class="marginL177">견적진행현황</th>
-                        <th class="marginL150">관리</th>
-                    </tr>
-                    <tr>
-                        <td>31122023-11AXD0820</td>
-                        <td>2023.12.31</td>
-                        <td>안전 중하중 그레이팅 맨홀(집수정용) 외 2건</td>
-                        <td>0.8m x 0.8m x 2.0m_130T x 130T-구</td>
-                        <td>
-                            <button type="button" class="marginL">확인대기중</button>
-                        </td>
-                        <td>
-                            <button type="button marginL150">요청취소</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>30122023-10DEF0815</td>
-                        <td>2023.12.30</td>
-                        <td>안전 중하중 그레이팅 맨홀(집수정용) 외 2건</td>
-                        <td>0.8m x 0.8m x 2.0m_130T x 130T-구</td>
-                        <td><button type="button" class="marginL">견적서 작성중</button></td>
-                        <td><button type="button">요청취소</button></td>
-                    </tr>
-                    <tr>
-                        <td>29122023-90OUD0701</td>
-                        <td>2023.12.29</td>
-                        <td>안전 중하중 그레이팅 맨홀(집수정용) 외 2건</td>
-                        <td>0.8m x 0.8m x 2.0m_130T x 130T-구</td>
-                        <td><button type="button" class="marginL blueBtn">견적서 확인</button></td>
-                        <td><button type="button" class="blackBtn">요청취소</button></td>
-                    </tr>
-                </table>
-            </div>
-        </main>
+        <div id="mainProductGroup">
+
+        </div>
         <footer class="footer">
             <div class="footerTop">
                 <div class="innerWrap">
@@ -5056,6 +5012,5 @@
     </div>
     <script src="./js/code.jquery.com_jquery-3.7.0.min.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/requesting.js"></script>
 </body>
-</html>
+</html>         

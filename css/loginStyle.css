@@ -75,6 +75,9 @@
     font-size: 1.125em;
     letter-spacing: -.5px;
 }
+.snsLogin{
+   margin-bottom: 35px;
+}
 .snsLogin .kakao{
     background: #ffdf00;
     color: #000;
