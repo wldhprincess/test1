@@ -137,6 +137,7 @@ $(function () {
         "button.arrow",
         "div[data-kt-btn-showCategoryMenuFirst=" + currentCategoryName + "]"
       ).on("click", function () {
+        console.log("click");
         var positionAbs = $(this).parents(".positionAbs");
 
         if (positionAbs.length > 0) {
@@ -172,7 +173,7 @@ $(function () {
         let productWrapBoxIdx = productWrapBox.attr("data-kt-productWrapBox");
 
         productWrapBox.load(
-          "main_aside/" + currentAsideName + ".html",
+          "main_aside_log/" + currentAsideName + ".html",
           // a-side 메뉴 클릭 후 제품 리스트 이벤트
           function () {
             $("button[data-kt-btn-product-detail]", productWrapBox).on(
@@ -188,7 +189,7 @@ $(function () {
                     .find("." + attr)
                     .show();
                 } else if (attr == "list") {
-                  location.href = "product.html";
+                  location.href = "productLog.html";
                 }
               }
             );
@@ -218,11 +219,10 @@ $(function () {
   let addressAlertShown = false;
 
   $(".requestBtn").click(function () {
-    if ($("#address").val() == "") {
-      if (!addressAlertShown) {
-        alert("주소를 입력해주세요");
-        addressAlertShown = true;
-      }
+    if ($("#address").val() == "" && !addressAlertShown) {
+      alert("주소를 입력해주세요");
+      addressAlertShown = true;
+
       $(".lineHeight").show();
       $(".estimate").css("height", "885px");
       $(".estimateTitPadding input").addClass("inputBox");
@@ -295,21 +295,21 @@ $(function () {
     if ($(this).find(".positionAbs").length) {
       return false;
     } else {
-      location.href = "productDetailsMain.html";
+      location.href = "productDetailsMainLog.html";
     }
   });
   $(".navShow .additional  > ul > li").click(function () {
     if ($(this).find(".positionAbs").length) {
       return false;
     } else {
-      location.href = "productDetailsPage.html";
+      location.href = "productDetailsPageLog.html";
     }
   });
   $(".navShow .addColor  > ul > li").click(function () {
     if ($(this).find(".positionAbs").length) {
       return false;
     } else {
-      location.href = "productDetails.html";
+      location.href = "productDetailsLog.html";
     }
   });
 
@@ -317,21 +317,21 @@ $(function () {
     if ($(this).find("button").length) {
       return false;
     } else {
-      location.href = "productDetailsMain.html";
+      location.href = "productDetailsMainLog.html";
     }
   });
   $(".navShow .additional  .positionAbs li").click(function () {
     if ($(this).find("button").length) {
       return false;
     } else {
-      location.href = "productDetailsPage.html";
+      location.href = "productDetailsPageLog.html";
     }
   });
   $(".navShow .addColor  .positionAbs li").click(function () {
     if ($(this).find("button").length) {
       return false;
     } else {
-      location.href = "productDetails.html";
+      location.href = "productDetailsLog.html";
     }
   });
 
@@ -339,21 +339,21 @@ $(function () {
     if ($(this).find(".positionAbs").length) {
       return false;
     } else {
-      location.href = "productDetailsMain.html";
+      location.href = "productDetailsMainLog.html";
     }
   });
   $(".navHide .additional").click(function () {
     if ($(this).find(".positionAbs").length) {
       return false;
     } else {
-      location.href = "productDetailsPage.html";
+      location.href = "productDetailsPageLog.html";
     }
   });
   $(".navHide .addColor").click(function () {
     if ($(this).find(".positionAbs").length) {
       return false;
     } else {
-      location.href = "productDetails.html";
+      location.href = "productDetailsLog.html";
     }
   });
 
@@ -361,21 +361,21 @@ $(function () {
     if ($(this).find("button").length) {
       return false;
     } else {
-      location.href = "productDetailsMain.html";
+      location.href = "productDetailsMainLog.html";
     }
   });
   $(".navHide .additional  .positionAbs li").click(function () {
     if ($(this).find("button").length) {
       return false;
     } else {
-      location.href = "productDetailsPage.html";
+      location.href = "productDetailsPageLog.html";
     }
   });
   $(".navHide .addColor  .positionAbs li").click(function () {
     if ($(this).find("button").length) {
       return false;
     } else {
-      location.href = "productDetails.html";
+      location.href = "productDetailsLog.html";
     }
   });
 });

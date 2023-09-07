@@ -31,7 +31,7 @@
                         </table>
                     </div>
                     <div class="login">
-                        <a href="./login.html">로그인</a>
+                        <a href="./login.html" id="login">로그인</a>
                         <a href="./join.html">회원가입</a>
                     </div>
                 </div>
@@ -45,15 +45,15 @@
                     <button type="button">용도별 품목</button>
                 </div>
                 <div class="classifyWrap">
-                    <div class="classify">
+                    <div class="classify classifyShow">
                         <div class="productNavigation">
                             <div class="MainCategory">
                                 <ul class="firstDepth">
                                     <li>
-                                        <a href="javascript:" title="철근콘크리트" id="titleClick0">철근콘크리트</a>
+                                        <a href="javascript:" title="철근콘크리트" id="titleClick0" class="selected">철근콘크리트</a>
                                         <ul class="secoudDepth selected">
-                                            <li><a href="javascript:" title="암거">암거</a></li>
-                                            <li><a href="javascript:" title="수로관" class="firstSelect">수로관</a></li>
+                                            <li><a href="javascript:" title="암거" class="select">암거</a></li>
+                                            <li><a href="javascript:" title="수로관">수로관</a></li>
                                             <li><a href="javascript:" title="플륨관">플륨관</a></li>
                                             <li><a href="javascript:" title="흄관/레진관">흄관/레진관</a></li>
                                             <li><a href="javascript:" title="VR관">VR관</a></li>
@@ -137,7 +137,7 @@
                                 <div class="products">
                                     <div class="productsTop">
                                         <div class="productsGrop">
-                                            <div class="productPhoto productPhoto1"></div>
+                                            <div class="productPhoto productPhoto1 productPtClick"></div>
                                             <div class="productName">
                                                 1련암거
                                             </div>
@@ -236,7 +236,7 @@
                                 <div class="products">
                                     <div class="productsTop">
                                         <div class="productsGrop">
-                                            <div class="productPhoto productPhoto1"></div>
+                                            <div class="productPhoto productPhoto1 productPtClick"></div>
                                             <div class="productName">
                                                 측구수로관
                                             </div>
@@ -354,7 +354,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     U형플륨관(벤치1종)
                                                 </div>
@@ -442,7 +442,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     흄관A형
                                                 </div>
@@ -542,7 +542,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     VR관
                                                 </div>
@@ -618,7 +618,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     PC중앙분리대
                                                 </div>
@@ -694,7 +694,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     PHC파일(고강도)
                                                 </div>
@@ -770,7 +770,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     토탈옹벽블록
                                                 </div>
@@ -852,7 +852,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     플륨관/수로관집게
                                                 </div>
@@ -942,7 +942,7 @@
                                     <div class="swiper swiper_2">
                                         <div class="productsTop productsTopF swiper-wrapper">
                                             <div class="productsGrop  swiper-slide">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     인조화강블록
                                                 </div>
@@ -1015,8 +1015,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-button-next"tabindex="-1"></div>
-                                    <div class="swiper-button-prev"tabindex="-1"></div>
+                                    <div class="swiper-button-next swiper-button-next_2"tabindex="-1"></div>
+                                    <div class="swiper-button-prev swiper-button-prev_2"tabindex="-1"></div>
                                     <div class="productsBtm productsBtmShow">
                                         <div class="productsGrop">
                                             <div class="productPhoto productPhoto9"></div>
@@ -1085,10 +1085,10 @@
                                         </div>
                                     </div>
                                     <div class="products productsP">
-                                        <div class="swiper">
+                                        <div class="swiper swiper_1">
                                             <div class="productsTop productsTopF swiper-wrapper">
                                                 <div class="productsGrop swiper-slide">
-                                                    <div class="productPhoto productPhoto1"></div>
+                                                    <div class="productPhoto productPhoto1 productPtClick"></div>
                                                     <div class="productName">
                                                         사각맨홀
                                                     </div>
@@ -1143,8 +1143,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-button-next"tabindex="-1"></div>
-                                        <div class="swiper-button-prev"tabindex="-1"></div>
+                                        <div class="swiper-button-next swiper-button-next_1"tabindex="-1"></div>
+                                        <div class="swiper-button-prev swiper-button-prev_1"tabindex="-1"></div>
                                         <div class="productsBtm productsBtmF productsBtmShow">
                                             <div class="productsGrop">
                                                 <div class="productPhoto productPhoto9"></div>
@@ -1215,7 +1215,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     콘크리트 경계석
                                                 </div>
@@ -1297,7 +1297,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     PC트렌치
                                                 </div>
@@ -1373,7 +1373,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     가로수보호판
                                                 </div>
@@ -1449,7 +1449,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     가로등 기초
                                                 </div>
@@ -1525,7 +1525,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     콘크리트 벽돌
                                                 </div>
@@ -1607,43 +1607,43 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     축조블록집게
                                                 </div>
                                             </div>
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto2"></div>
                                                 <div class="productName">
                                                     보강토집게
                                                 </div>
                                             </div>
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto3"></div>
                                                 <div class="productName">
                                                     경계석집게
                                                 </div>
                                             </div>
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto4"></div>
                                                 <div class="productName">
                                                     그리드
                                                 </div>
                                             </div>
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto5"></div>
                                                 <div class="productName">
                                                     규사
                                                 </div>
                                             </div>
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto6"></div>
                                                 <div class="productName">
                                                     부직포
                                                 </div>
                                             </div>
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto7"></div>
                                                 <div class="productName">
                                                     몰탈용고무시트
                                                 </div>
@@ -1719,7 +1719,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     그레이팅
                                                 </div>
@@ -1813,7 +1813,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     무소음트렌치
                                                 </div>
@@ -1895,7 +1895,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     파형강관
                                                 </div>
@@ -2001,7 +2001,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     주철뚜껑(우수/오수/전기/통신)
                                                 </div>
@@ -2095,7 +2095,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     직선앵글
                                                 </div>
@@ -2177,7 +2177,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     체크무늬철판
                                                 </div>
@@ -2259,7 +2259,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     화강경계도로
                                                 </div>
@@ -2347,7 +2347,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     험프석
                                                 </div>
@@ -2459,7 +2459,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     돌망태(개비온)
                                                 </div>
@@ -2535,7 +2535,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     PE이중벽관 1종
                                                 </div>
@@ -2653,7 +2653,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     PE다중벽관
                                                 </div>
@@ -2735,15 +2735,15 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
-                                                    고강성PVC이중벽관
+                                                    고강성PVC 이중벽관
                                                 </div>
                                             </div>
                                             <div class="productsGrop">
                                                 <div class="productPhoto productPhoto2"></div>
                                                 <div class="productName">
-                                                    고강성PVC이중소켓
+                                                    고강성PVC 이중소켓
                                                 </div>
                                             </div>
                                         </div>
@@ -2817,7 +2817,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     PVC관(VG1상수도)
                                                 </div>
@@ -2923,7 +2923,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     HDPE관이중벽관(직관)
                                                 </div>
@@ -3005,7 +3005,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     PE
                                                 </div>
@@ -3087,7 +3087,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     THP주름관
                                                 </div>
@@ -3169,19 +3169,19 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     카스토퍼
                                                 </div>
                                             </div>
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto2"></div>
                                                 <div class="productName">
                                                     그레이팅덮개
                                                 </div>
                                             </div>
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto3"></div>
                                                 <div class="productName">
                                                     플라스틱그레이팅
                                                 </div>
@@ -3257,7 +3257,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     그레이팅덮개
                                                 </div>
@@ -3339,7 +3339,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     플라스틱 그레이팅
                                                 </div>
@@ -3415,7 +3415,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     몰탈용 고무시트
                                                 </div>
@@ -3491,7 +3491,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     PE사다리
                                                 </div>
@@ -3567,7 +3567,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     부직포
                                                 </div>
@@ -3624,33 +3624,33 @@
                            
                         </div>
                     </div>
-                    <!-- <div class="classify classifyHide">
+                    <div class="classify classifyHide">
                         <div class="productNavigation">
                             <div class="MainCategory">
                                 <ul class="firstDepth">
                                     <li>
-                                        <a href="javascript:" title="배수로(수로)" id="titleClick0">배수로(수로)</a>
+                                        <a href="javascript:" title="배수로(수로)" id="titleClick5" class="selected">배수로(수로)</a>
                                         <ul class="secoudDepth selected">
-                                            <li><a href="javascript:" title="배수로(매립형)">배수로(매립형)</a></li>
-                                            <li><a href="javascript:" title="배수로(노출형)" class="firstSelect">배수로(노출형)</a></li>
+                                            <li><a href="javascript:" title="배수로(매립형)" class="firstSelect">배수로(매립형)</a></li>
+                                            <li><a href="javascript:" title="배수로(노출형)">배수로(노출형)</a></li>
                                             <li><a href="javascript:" title="배수로 덮개">배수로 덮개</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="javascript:" title="집수정(맨홀)" id="titleClick1">집수정(맨홀)</a>
+                                        <a href="javascript:" title="집수정(맨홀)" id="titleClick6">집수정(맨홀)</a>
                                         <ul class="secoudDepth">
                                             <li><a href="javascript:" title="집수정(맨홀)">집수정(맨홀)</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="javascript:" title="블록(포장/옹벽블록)" id="titleClick2">블록(포장/옹벽블록)</a>
+                                        <a href="javascript:" title="블록(포장/옹벽블록)" id="titleClick7">블록(포장/옹벽블록)</a>
                                         <ul class="secoudDepth">
                                             <li><a href="javascript:" title="경계/포장 블록">경계/포장 블록</a></li>
                                             <li><a href="javascript:" title="하천 옹벽블록">하천 옹벽블록</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="javascript:" title="기타(전기/조경)" id="titleClick3">기타(전기/조경)</a>
+                                        <a href="javascript:" title="기타(전기/조경)" id="titleClick8">기타(전기/조경)</a>
                                         <ul class="secoudDepth">
                                             <li><a href="javascript:" title="화강경계석">기타</a></li>
                                         </ul>
@@ -3663,7 +3663,7 @@
                             <div class="lineBarBtm"></div>
                         </div>
                         <div class="selectProductBox">
-                            <div class="productBox" id="secoundDepthKing0">
+                            <div class="productBox" id="secoundDepthKing5">
                                 <div class="classifyselect">
                                     <div class="classifyRName">
                                         <h1>배수로(수로)</h1>
@@ -3681,81 +3681,85 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="products">
-                                    <div class="productsTop">
-                                        <div class="productsGrop">
-                                            <div class="productPhoto productPhoto1"></div>
-                                            <div class="productName">
-                                                암거
+                                <div class="products productsP">
+                                    <div class="swiper swiper_4">
+                                        <div class="productsTop  productsTopF swiper-wrapper">
+                                            <div class="productsGrop swiper-slide">
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
+                                                <div class="productName">
+                                                    암거
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="productsGrop">
-                                            <div class="productPhoto productPhoto2"></div>
-                                            <div class="productName">
-                                                흄관
+                                            <div class="productsGrop swiper-slide">
+                                                <div class="productPhoto productPhoto2"></div>
+                                                <div class="productName">
+                                                    흄관
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="productsGrop">
-                                            <div class="productPhoto productPhoto3"></div>
-                                            <div class="productName">
-                                                건널목수로관
+                                            <div class="productsGrop swiper-slide">
+                                                <div class="productPhoto productPhoto3"></div>
+                                                <div class="productName">
+                                                    건널목수로관
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="productsGrop">
-                                            <div class="productPhoto productPhoto4"></div>
-                                            <div class="productName">
-                                                파형강관
+                                            <div class="productsGrop swiper-slide">
+                                                <div class="productPhoto productPhoto4"></div>
+                                                <div class="productName">
+                                                    파형강관
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="productsGrop">
-                                            <div class="productPhoto productPhoto5"></div>
-                                            <div class="productName">
-                                                PE이중벽관
+                                            <div class="productsGrop swiper-slide">
+                                                <div class="productPhoto productPhoto5"></div>
+                                                <div class="productName">
+                                                    PE이중벽관
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="productsGrop">
-                                            <div class="productPhoto productPhoto9"></div>
-                                            <div class="productName">
-                                                PE다중벽관
+                                            <div class="productsGrop swiper-slide">
+                                                <div class="productPhoto productPhoto9"></div>
+                                                <div class="productName">
+                                                    PE다중벽관
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="productsGrop">
-                                            <div class="productPhoto productPhoto10"></div>
-                                            <div class="productName">
-                                                고강성PVC 이중벽관
+                                            <div class="productsGrop swiper-slide">
+                                                <div class="productPhoto productPhoto10"></div>
+                                                <div class="productName">
+                                                    고강성PVC 이중벽관
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="productsGrop">
-                                            <div class="productPhoto productPhoto11"></div>
-                                            <div class="productName">
-                                                PVC관
+                                            <div class="productsGrop swiper-slide">
+                                                <div class="productPhoto productPhoto11"></div>
+                                                <div class="productName">
+                                                    PVC관
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="productsGrop">
-                                            <div class="productPhoto productPhoto12"></div>
-                                            <div class="productName">
-                                                HDPE이중벽관
+                                            <div class="productsGrop swiper-slide">
+                                                <div class="productPhoto productPhoto12"></div>
+                                                <div class="productName">
+                                                    HDPE이중벽관
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="productsGrop">
-                                            <div class="productPhoto productPhoto13"></div>
-                                            <div class="productName">
-                                                레진관
+                                            <div class="productsGrop swiper-slide">
+                                                <div class="productPhoto productPhoto13"></div>
+                                                <div class="productName">
+                                                    레진관
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="productsGrop">
-                                            <div class="productPhoto productPhoto14"></div>
-                                            <div class="productName">
-                                                VR관
+                                            <div class="productsGrop swiper-slide">
+                                                <div class="productPhoto productPhoto14"></div>
+                                                <div class="productName">
+                                                    VR관
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="productsGrop">
-                                            <div class="productPhoto productPhoto15"></div>
-                                            <div class="productName">
-                                                PE/PY
+                                            <div class="productsGrop swiper-slide">
+                                                <div class="productPhoto productPhoto15"></div>
+                                                <div class="productName">
+                                                    PE/PY
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="swiper-button-next swiper-button-next_4"tabindex="-1"></div>
+                                    <div class="swiper-button-prev swiper-button-prev_4"tabindex="-1"></div>
                                     <div class="productsBtm productsBtmShow">
                                         <div class="productsGrop">
                                             <div class="productPhoto productPhoto9"></div>
@@ -3804,7 +3808,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="productBox" id="initialProductBox">
+                            <div class="productBox">
                                 <div class="classifyselect">
                                     <div class="classifyRName">
                                         <h1>배수로(수로)</h1>
@@ -3825,7 +3829,7 @@
                                 <div class="products">
                                     <div class="productsTop">
                                         <div class="productsGrop">
-                                            <div class="productPhoto productPhoto1"></div>
+                                            <div class="productPhoto productPhoto1 productPtClick"></div>
                                             <div class="productName">
                                                 U형 플륨관 벤치 1종
                                             </div>
@@ -3943,7 +3947,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     측구수로관A형(앵글미부착)
                                                 </div>
@@ -4027,7 +4031,7 @@
                                         </div>
                                     </div>
                             </div>
-                            <div class="productBox" id="secoundDepthKing1">
+                            <div class="productBox" id="secoundDepthKing6">
                                 
                                     <div class="classifyselect">
                                         <div class="classifyRName">
@@ -4047,57 +4051,57 @@
                                         </div>
                                     </div>
                                     <div class="products productsP">
-                                        <div class="swiper secondSwiper">
-                                            <div class="productsTop productsTopF swiper-wrapper secondSwiper">
-                                                <div class="productsGrop swiper-slide secondSwiper">
-                                                    <div class="productPhoto productPhoto1"></div>
+                                        <div class="swiper swiper_3">
+                                            <div class="productsTop productsTopF swiper-wrapper">
+                                                <div class="productsGrop swiper-slide">
+                                                    <div class="productPhoto productPhoto1 productPtClick"></div>
                                                     <div class="productName">
                                                         사각맨홀
                                                     </div>
                                                 </div>
-                                                <div class="productsGrop swiper-slide secondSwiper">
+                                                <div class="productsGrop swiper-slide">
                                                     <div class="productPhoto productPhoto2"></div>
                                                     <div class="productName">
                                                         사각노바시
                                                     </div>
                                                 </div>
-                                                <div class="productsGrop swiper-slide secondSwiper">
+                                                <div class="productsGrop swiper-slide">
                                                     <div class="productPhoto productPhoto3"></div>
                                                     <div class="productName">
                                                         원형맨홀
                                                     </div>
                                                 </div>
-                                                <div class="productsGrop swiper-slide secondSwiper">
+                                                <div class="productsGrop swiper-slide">
                                                     <div class="productPhoto productPhoto4"></div>
                                                     <div class="productName">
                                                         원형노바시
                                                     </div>
                                                 </div>
-                                                <div class="productsGrop swiper-slide secondSwiper">
+                                                <div class="productsGrop swiper-slide">
                                                     <div class="productPhoto productPhoto5"></div>
                                                     <div class="productName">
                                                         침투집수정
                                                     </div>
                                                 </div>
-                                                <div class="productsGrop swiper-slide secondSwiper">
+                                                <div class="productsGrop swiper-slide">
                                                     <div class="productPhoto productPhoto6"></div>
                                                     <div class="productName">
                                                         전기맨홀
                                                     </div>
                                                 </div>
-                                                <div class="productsGrop swiper-slide secondSwiper">
+                                                <div class="productsGrop swiper-slide">
                                                     <div class="productPhoto productPhoto7"></div>
                                                     <div class="productName">
                                                         통신맨홀
                                                     </div>
                                                 </div>
-                                                <div class="productsGrop swiper-slide secondSwiper">
+                                                <div class="productsGrop swiper-slide">
                                                     <div class="productPhoto productPhoto8"></div>
                                                     <div class="productName">
                                                         조립식맨홀(상부, 연직, 하부구체)
                                                     </div>
                                                 </div>
-                                                <div class="productsGrop swiper-slide secondSwiper">
+                                                <div class="productsGrop swiper-slide">
                                                     <div class="productPhoto productPhoto8"></div>
                                                     <div class="productName">
                                                         조립식PC맨홀(전체높이)
@@ -4105,8 +4109,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-button-next secondSwiper"tabindex="-1"></div>
-                                        <div class="swiper-button-prev secondSwiper"tabindex="-1"></div>
+                                        <div class="swiper-button-next swiper-button-next_3"tabindex="-1"></div>
+                                        <div class="swiper-button-prev swiper-button-prev_3"tabindex="-1"></div>
                                         <div class="productsBtm productsBtmF productsBtmShow">
                                             <div class="productsGrop">
                                                 <div class="productPhoto productPhoto9"></div>
@@ -4155,11 +4159,10 @@
                                         </div>
                                     </div>
                             </div>
-                            <div class="productBox" id="secoundDepthKing2">
-                                
+                            <div class="productBox" id="secoundDepthKing7">
                                     <div class="classifyselect">
                                         <div class="classifyRName">
-                                            <h1>블록(포장/옹벽블록)</h1>
+                                            <h1 class="productBoxFontDown">블록(포장/옹벽블록)</h1>
                                             <h2>경계/포장 블록</h2>
                                         </div>
                                         <div class="underbar"></div>
@@ -4177,7 +4180,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     주철뚜껑(우수/오수/전기/통신)
                                                 </div>
@@ -4253,7 +4256,7 @@
                                 
                                     <div class="classifyselect">
                                         <div class="classifyRName">
-                                            <h1>블록(포장/옹벽블록)</h1>
+                                            <h1 class="productBoxFontDown">블록(포장/옹벽블록)</h1>
                                             <h2>하천 옹벽블록</h2>
                                         </div>
                                         <div class="underbar"></div>
@@ -4271,7 +4274,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     무소음트렌치
                                                 </div>
@@ -4331,7 +4334,7 @@
                                         </div>
                                     </div>
                             </div>
-                            <div class="productBox" id="secoundDepthKing3">
+                            <div class="productBox" id="secoundDepthKing8">
                                 
                                     <div class="classifyselect">
                                         <div class="classifyRName">
@@ -4353,7 +4356,7 @@
                                     <div class="products">
                                         <div class="productsTop">
                                             <div class="productsGrop">
-                                                <div class="productPhoto productPhoto1"></div>
+                                                <div class="productPhoto productPhoto1 productPtClick"></div>
                                                 <div class="productName">
                                                     화강경계도로
                                                 </div>
@@ -4420,7 +4423,7 @@
                                     </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -4448,109 +4451,636 @@
                             <button type="button">측구수로관 유공</button>
                             <button type="button">침투측구수로관</button>
                         </div>
-                        <table class="background">
-                            <tr>
-                                <th class="W100">사진</th>
-                                <th class="W236">품명</th>
-                                <th class="W220">
-                                    규격<br><span>(내경기준 : 폭X깊이X길이X두께)</span>
-                                </th>
-                                <th class="W60">
-                                    재고<br><span>(본)</span>
-                                </th>
-                                <th class="W60">
-                                    중량<br><span>(Kg)</span>
-                                </th>
-                                <th class="W135">
-                                    도매단가<br><span>(원/부가세별도)</span>
-                                </th>
-                                <th class="W75">
-                                    상차수량<br><span>(본/25톤)</span>
-                                </th>
-                                <!-- <th class="W134">
-                                    운반비 예상<br><span>(본/30만원/25톤)</span>
-                                </th> -->
-                                <th class="W100">추가상품정보</th>
-                                <th class="W100">견적수량</th>
-                                <th class="W100">견적추가</th>
-                            </tr>
-                        </table>
-                        <table class="toggle">
-                            <tr>
-                                <td class="W100" onClick="location.href='./productDetailsPage.html'"><div class="buyImg"></div></td>
-                                <td class="W236 fontW" onClick="location.href='./productDetailsPage.html'">U형 플륨관 (벤치 1종)</td>
-                                <td class="W220" onClick="location.href='./productDetailsPage.html'">310*275*3000*32T</td>
-                                <td class="W60">220</td>
-                                <td class="W60">145</td>
-                                <td class="W135">31,500</td>
-                                <td class="W75">128</td>
-                                <!-- <td class="W134">2,400</td> -->
-                                <td class="W100"><button type="button" class="colorGray colorGrayBtn">내용보기</button></td>
-                                <td class="W100"><input type="text" name="" id="" ></td>
-                                <td class="W100"><button type="button" class="add">견적추가</button></td>
-                            </tr>
-                        </table>
-                        <table class="colorGrayClick">
-                            <tr class="height45">
-                                <td class="W710" rowspan="2">
-                                    상세설명<br>
-                                    <span>수도권, 충청, 강원일부 5톤축 변경 시 40% 추가</span>
-                                </td>
-                                <th class="W180">추가구성품목</th>
-                                <th class="W150">수량</th>
-                                <th class="W180">규격</th>
-                                <th class="W100">단가</th>
-                            </tr>
-                            <tr class="height55">
-                                <td class="W180">날개형 그레이팅</td>
-                                <td class="W150">
-                                    <label for="">
-                                        <input type="text">
-                                        <button type="button"  class="add">견적추가</button>
-                                    </label>
-                                </td>
-                                <td class="W180">295*995*25</td>
-                                <td class="W100">16,900</td>
-                            </tr>
-                        </table>
-                        <table class="pageChange toggle">
-                            <tr>
-                                <td class="W100" onClick="location.href='./productDetailsPage.html'"><div class="buyImg" ></div></td>
-                                <td class="W236" onClick="location.href='./productDetailsPage.html'">U형 플륨관 (벤치 1종)</td>
-                                <td class="W220" onClick="location.href='./productDetailsPage.html'">425*350*2000*38T</td>
-                                <td class="W60">125</td>
-                                <td class="W60">210</td>
-                                <td class="W135">40,000</td>
-                                <td class="W75">86</td>
-                                <!-- <td class="W134">3,500</td> -->
-                                <td class="W100"><button type="button" class="colorGray colorGrayBtn">내용보기</button></td>
-                                <td class="W100"><input type="text" name="" id=""></td>
-                                <td class="W100"><button type="button"  class="add">견적추가</button></td>
-                            </tr>
-                        </table>
-                        <table class="colorGrayClick">
-                            <tr class="height45">
-                                <td class="W710" rowspan="2">
-                                    상세설명<br>
-                                    <span>수도권, 충청, 강원일부 5톤축 변경 시 40% 추가</span>
-                                </td>
-                                <th class="W180">추가구성품목</th>
-                                <th class="W150">수량</th>
-                                <th class="W180">규격</th>
-                                <th class="W100">단가</th>
-                            </tr>
-                            <tr class="height55">
-                                <td class="W180">날개형 그레이팅</td>
-                                <td class="W150">
-                                    <label for="">
-                                        <input type="text" >
-                                        <button type="button" class="add">견적추가</button>
-                                    </label>
-                                </td>
-                                <td class="W180">295*995*25</td>
-                                <td class="W100">16,900</td>
-                            </tr>
-                        </table>
+                        <div class="tableWrap">
+                            <table class="background">
+                                <tr>
+                                    <th class="W100">사진</th>
+                                    <th class="W236">품명</th>
+                                    <th class="W220">
+                                        규격<br><span>(내경기준 : 폭X깊이X길이X두께)</span>
+                                    </th>
+                                    <th class="W60">
+                                        재고<br><span>(본)</span>
+                                    </th>
+                                    <th class="W60">
+                                        중량<br><span>(Kg)</span>
+                                    </th>
+                                    <th class="W135">
+                                        도매단가<br><span>(원/부가세별도)</span>
+                                    </th>
+                                    <th class="W75">
+                                        상차수량<br><span>(본/25톤)</span>
+                                    </th>
+                                    <!-- <th class="W134">
+                                        운반비 예상<br><span>(본/30만원/25톤)</span>
+                                    </th> -->
+                                    <th class="W100">추가상품정보</th>
+                                    <th class="W100">견적수량</th>
+                                    <th class="W100">견적추가</th>
+                                </tr>
+                            </table>
+                            <table class="toggle">
+                                <tr>
+                                    <td class="W100" onClick="location.href='./productDetailsPage.html'"><div class="buyImg"></div></td>
+                                    <td class="W236 fontW" onClick="location.href='./productDetailsPage.html'">U형 플륨관 (벤치 1종)</td>
+                                    <td class="W220" onClick="location.href='./productDetailsPage.html'">310*275*3000*32T</td>
+                                    <td class="W60">220</td>
+                                    <td class="W60">145</td>
+                                    <td class="W135">31,500</td>
+                                    <td class="W75">128</td>
+                                    <!-- <td class="W134">2,400</td> -->
+                                    <td class="W100"><button type="button" class="colorGray colorGrayBtn">내용보기</button></td>
+                                    <td class="W100"><input type="text" name="" id="" ></td>
+                                    <td class="W100"><button type="button" class="add">견적추가</button></td>
+                                </tr>
+                            </table>
+                            <table class="colorGrayClick">
+                                <tr class="height45">
+                                    <td class="W710" rowspan="2">
+                                        상세설명<br>
+                                        <span>수도권, 충청, 강원일부 5톤축 변경 시 40% 추가</span>
+                                    </td>
+                                    <th class="W180">추가구성품목</th>
+                                    <th class="W150">수량</th>
+                                    <th class="W180">규격</th>
+                                    <th class="W100">단가</th>
+                                </tr>
+                                <tr class="height55">
+                                    <td class="W180">날개형 그레이팅</td>
+                                    <td class="W150">
+                                        <label for="">
+                                            <input type="text">
+                                            <button type="button"  class="add">견적추가</button>
+                                        </label>
+                                    </td>
+                                    <td class="W180">295*995*25</td>
+                                    <td class="W100">16,900</td>
+                                </tr>
+                            </table>
+                            <table class="pageChange toggle">
+                                <tr>
+                                    <td class="W100" onClick="location.href='./productDetailsPage.html'"><div class="buyImg" ></div></td>
+                                    <td class="W236" onClick="location.href='./productDetailsPage.html'">U형 플륨관 (벤치 1종)</td>
+                                    <td class="W220" onClick="location.href='./productDetailsPage.html'">425*350*2000*38T</td>
+                                    <td class="W60">125</td>
+                                    <td class="W60">210</td>
+                                    <td class="W135">40,000</td>
+                                    <td class="W75">86</td>
+                                    <!-- <td class="W134">3,500</td> -->
+                                    <td class="W100"><button type="button" class="colorGray colorGrayBtn">내용보기</button></td>
+                                    <td class="W100"><input type="text" name="" id=""></td>
+                                    <td class="W100"><button type="button"  class="add">견적추가</button></td>
+                                </tr>
+                            </table>
+                            <table class="colorGrayClick">
+                                <tr class="height45">
+                                    <td class="W710" rowspan="2">
+                                        상세설명<br>
+                                        <span>수도권, 충청, 강원일부 5톤축 변경 시 40% 추가</span>
+                                    </td>
+                                    <th class="W180">추가구성품목</th>
+                                    <th class="W150">수량</th>
+                                    <th class="W180">규격</th>
+                                    <th class="W100">단가</th>
+                                </tr>
+                                <tr class="height55">
+                                    <td class="W180">날개형 그레이팅</td>
+                                    <td class="W150">
+                                        <label for="">
+                                            <input type="text" >
+                                            <button type="button" class="add">견적추가</button>
+                                        </label>
+                                    </td>
+                                    <td class="W180">295*995*25</td>
+                                    <td class="W100">16,900</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tableWrap">
+                            <table class="background">
+                                <tr>
+                                    <th class="W100">사진1</th>
+                                    <th class="W236">품명</th>
+                                    <th class="W220">
+                                        규격<br><span>(내경기준 : 폭X깊이X길이X두께)</span>
+                                    </th>
+                                    <th class="W60">
+                                        재고<br><span>(본)</span>
+                                    </th>
+                                    <th class="W60">
+                                        중량<br><span>(Kg)</span>
+                                    </th>
+                                    <th class="W135">
+                                        도매단가<br><span>(원/부가세별도)</span>
+                                    </th>
+                                    <th class="W75">
+                                        상차수량<br><span>(본/25톤)</span>
+                                    </th>
+                                    <!-- <th class="W134">
+                                        운반비 예상<br><span>(본/30만원/25톤)</span>
+                                    </th> -->
+                                    <th class="W100">추가상품정보</th>
+                                    <th class="W100">견적수량</th>
+                                    <th class="W100">견적추가</th>
+                                </tr>
+                            </table>
+                            <table class="toggle">
+                                <tr>
+                                    <td class="W100" onClick="location.href='./productDetailsPage.html'"><div class="buyImg"></div></td>
+                                    <td class="W236 fontW" onClick="location.href='./productDetailsPage.html'">U형 플륨관 (벤치 1종)</td>
+                                    <td class="W220" onClick="location.href='./productDetailsPage.html'">310*275*3000*32T</td>
+                                    <td class="W60">220</td>
+                                    <td class="W60">145</td>
+                                    <td class="W135">31,500</td>
+                                    <td class="W75">128</td>
+                                    <!-- <td class="W134">2,400</td> -->
+                                    <td class="W100"><button type="button" class="colorGray colorGrayBtn">내용보기</button></td>
+                                    <td class="W100"><input type="text" name="" id="" ></td>
+                                    <td class="W100"><button type="button" class="add">견적추가</button></td>
+                                </tr>
+                            </table>
+                            <table class="colorGrayClick">
+                                <tr class="height45">
+                                    <td class="W710" rowspan="2">
+                                        상세설명<br>
+                                        <span>수도권, 충청, 강원일부 5톤축 변경 시 40% 추가</span>
+                                    </td>
+                                    <th class="W180">추가구성품목</th>
+                                    <th class="W150">수량</th>
+                                    <th class="W180">규격</th>
+                                    <th class="W100">단가</th>
+                                </tr>
+                                <tr class="height55">
+                                    <td class="W180">날개형 그레이팅</td>
+                                    <td class="W150">
+                                        <label for="">
+                                            <input type="text">
+                                            <button type="button"  class="add">견적추가</button>
+                                        </label>
+                                    </td>
+                                    <td class="W180">295*995*25</td>
+                                    <td class="W100">16,900</td>
+                                </tr>
+                            </table>
+                            <table class="pageChange toggle">
+                                <tr>
+                                    <td class="W100" onClick="location.href='./productDetailsPage.html'"><div class="buyImg" ></div></td>
+                                    <td class="W236" onClick="location.href='./productDetailsPage.html'">U형 플륨관 (벤치 1종)</td>
+                                    <td class="W220" onClick="location.href='./productDetailsPage.html'">425*350*2000*38T</td>
+                                    <td class="W60">125</td>
+                                    <td class="W60">210</td>
+                                    <td class="W135">40,000</td>
+                                    <td class="W75">86</td>
+                                    <!-- <td class="W134">3,500</td> -->
+                                    <td class="W100"><button type="button" class="colorGray colorGrayBtn">내용보기</button></td>
+                                    <td class="W100"><input type="text" name="" id=""></td>
+                                    <td class="W100"><button type="button"  class="add">견적추가</button></td>
+                                </tr>
+                            </table>
+                            <table class="colorGrayClick">
+                                <tr class="height45">
+                                    <td class="W710" rowspan="2">
+                                        상세설명<br>
+                                        <span>수도권, 충청, 강원일부 5톤축 변경 시 40% 추가</span>
+                                    </td>
+                                    <th class="W180">추가구성품목</th>
+                                    <th class="W150">수량</th>
+                                    <th class="W180">규격</th>
+                                    <th class="W100">단가</th>
+                                </tr>
+                                <tr class="height55">
+                                    <td class="W180">날개형 그레이팅</td>
+                                    <td class="W150">
+                                        <label for="">
+                                            <input type="text" >
+                                            <button type="button" class="add">견적추가</button>
+                                        </label>
+                                    </td>
+                                    <td class="W180">295*995*25</td>
+                                    <td class="W100">16,900</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tableWrap">
+                            <table class="background">
+                                <tr>
+                                    <th class="W100">사진2</th>
+                                    <th class="W236">품명</th>
+                                    <th class="W220">
+                                        규격<br><span>(내경기준 : 폭X깊이X길이X두께)</span>
+                                    </th>
+                                    <th class="W60">
+                                        재고<br><span>(본)</span>
+                                    </th>
+                                    <th class="W60">
+                                        중량<br><span>(Kg)</span>
+                                    </th>
+                                    <th class="W135">
+                                        도매단가<br><span>(원/부가세별도)</span>
+                                    </th>
+                                    <th class="W75">
+                                        상차수량<br><span>(본/25톤)</span>
+                                    </th>
+                                    <!-- <th class="W134">
+                                        운반비 예상<br><span>(본/30만원/25톤)</span>
+                                    </th> -->
+                                    <th class="W100">추가상품정보</th>
+                                    <th class="W100">견적수량</th>
+                                    <th class="W100">견적추가</th>
+                                </tr>
+                            </table>
+                            <table class="toggle">
+                                <tr>
+                                    <td class="W100" onClick="location.href='./productDetailsPage.html'"><div class="buyImg"></div></td>
+                                    <td class="W236 fontW" onClick="location.href='./productDetailsPage.html'">U형 플륨관 (벤치 1종)</td>
+                                    <td class="W220" onClick="location.href='./productDetailsPage.html'">310*275*3000*32T</td>
+                                    <td class="W60">220</td>
+                                    <td class="W60">145</td>
+                                    <td class="W135">31,500</td>
+                                    <td class="W75">128</td>
+                                    <!-- <td class="W134">2,400</td> -->
+                                    <td class="W100"><button type="button" class="colorGray colorGrayBtn">내용보기</button></td>
+                                    <td class="W100"><input type="text" name="" id="" ></td>
+                                    <td class="W100"><button type="button" class="add">견적추가</button></td>
+                                </tr>
+                            </table>
+                            <table class="colorGrayClick">
+                                <tr class="height45">
+                                    <td class="W710" rowspan="2">
+                                        상세설명<br>
+                                        <span>수도권, 충청, 강원일부 5톤축 변경 시 40% 추가</span>
+                                    </td>
+                                    <th class="W180">추가구성품목</th>
+                                    <th class="W150">수량</th>
+                                    <th class="W180">규격</th>
+                                    <th class="W100">단가</th>
+                                </tr>
+                                <tr class="height55">
+                                    <td class="W180">날개형 그레이팅</td>
+                                    <td class="W150">
+                                        <label for="">
+                                            <input type="text">
+                                            <button type="button"  class="add">견적추가</button>
+                                        </label>
+                                    </td>
+                                    <td class="W180">295*995*25</td>
+                                    <td class="W100">16,900</td>
+                                </tr>
+                            </table>
+                            <table class="pageChange toggle">
+                                <tr>
+                                    <td class="W100" onClick="location.href='./productDetailsPage.html'"><div class="buyImg" ></div></td>
+                                    <td class="W236" onClick="location.href='./productDetailsPage.html'">U형 플륨관 (벤치 1종)</td>
+                                    <td class="W220" onClick="location.href='./productDetailsPage.html'">425*350*2000*38T</td>
+                                    <td class="W60">125</td>
+                                    <td class="W60">210</td>
+                                    <td class="W135">40,000</td>
+                                    <td class="W75">86</td>
+                                    <!-- <td class="W134">3,500</td> -->
+                                    <td class="W100"><button type="button" class="colorGray colorGrayBtn">내용보기</button></td>
+                                    <td class="W100"><input type="text" name="" id=""></td>
+                                    <td class="W100"><button type="button"  class="add">견적추가</button></td>
+                                </tr>
+                            </table>
+                            <table class="colorGrayClick">
+                                <tr class="height45">
+                                    <td class="W710" rowspan="2">
+                                        상세설명<br>
+                                        <span>수도권, 충청, 강원일부 5톤축 변경 시 40% 추가</span>
+                                    </td>
+                                    <th class="W180">추가구성품목</th>
+                                    <th class="W150">수량</th>
+                                    <th class="W180">규격</th>
+                                    <th class="W100">단가</th>
+                                </tr>
+                                <tr class="height55">
+                                    <td class="W180">날개형 그레이팅</td>
+                                    <td class="W150">
+                                        <label for="">
+                                            <input type="text" >
+                                            <button type="button" class="add">견적추가</button>
+                                        </label>
+                                    </td>
+                                    <td class="W180">295*995*25</td>
+                                    <td class="W100">16,900</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tableWrap">
+                            <table class="background">
+                                <tr>
+                                    <th class="W100">사진3</th>
+                                    <th class="W236">품명</th>
+                                    <th class="W220">
+                                        규격<br><span>(내경기준 : 폭X깊이X길이X두께)</span>
+                                    </th>
+                                    <th class="W60">
+                                        재고<br><span>(본)</span>
+                                    </th>
+                                    <th class="W60">
+                                        중량<br><span>(Kg)</span>
+                                    </th>
+                                    <th class="W135">
+                                        도매단가<br><span>(원/부가세별도)</span>
+                                    </th>
+                                    <th class="W75">
+                                        상차수량<br><span>(본/25톤)</span>
+                                    </th>
+                                    <!-- <th class="W134">
+                                        운반비 예상<br><span>(본/30만원/25톤)</span>
+                                    </th> -->
+                                    <th class="W100">추가상품정보</th>
+                                    <th class="W100">견적수량</th>
+                                    <th class="W100">견적추가</th>
+                                </tr>
+                            </table>
+                            <table class="toggle">
+                                <tr>
+                                    <td class="W100" onClick="location.href='./productDetailsPage.html'"><div class="buyImg"></div></td>
+                                    <td class="W236 fontW" onClick="location.href='./productDetailsPage.html'">U형 플륨관 (벤치 1종)</td>
+                                    <td class="W220" onClick="location.href='./productDetailsPage.html'">310*275*3000*32T</td>
+                                    <td class="W60">220</td>
+                                    <td class="W60">145</td>
+                                    <td class="W135">31,500</td>
+                                    <td class="W75">128</td>
+                                    <!-- <td class="W134">2,400</td> -->
+                                    <td class="W100"><button type="button" class="colorGray colorGrayBtn">내용보기</button></td>
+                                    <td class="W100"><input type="text" name="" id="" ></td>
+                                    <td class="W100"><button type="button" class="add">견적추가</button></td>
+                                </tr>
+                            </table>
+                            <table class="colorGrayClick">
+                                <tr class="height45">
+                                    <td class="W710" rowspan="2">
+                                        상세설명<br>
+                                        <span>수도권, 충청, 강원일부 5톤축 변경 시 40% 추가</span>
+                                    </td>
+                                    <th class="W180">추가구성품목</th>
+                                    <th class="W150">수량</th>
+                                    <th class="W180">규격</th>
+                                    <th class="W100">단가</th>
+                                </tr>
+                                <tr class="height55">
+                                    <td class="W180">날개형 그레이팅</td>
+                                    <td class="W150">
+                                        <label for="">
+                                            <input type="text">
+                                            <button type="button"  class="add">견적추가</button>
+                                        </label>
+                                    </td>
+                                    <td class="W180">295*995*25</td>
+                                    <td class="W100">16,900</td>
+                                </tr>
+                            </table>
+                            <table class="pageChange toggle">
+                                <tr>
+                                    <td class="W100" onClick="location.href='./productDetailsPage.html'"><div class="buyImg" ></div></td>
+                                    <td class="W236" onClick="location.href='./productDetailsPage.html'">U형 플륨관 (벤치 1종)</td>
+                                    <td class="W220" onClick="location.href='./productDetailsPage.html'">425*350*2000*38T</td>
+                                    <td class="W60">125</td>
+                                    <td class="W60">210</td>
+                                    <td class="W135">40,000</td>
+                                    <td class="W75">86</td>
+                                    <!-- <td class="W134">3,500</td> -->
+                                    <td class="W100"><button type="button" class="colorGray colorGrayBtn">내용보기</button></td>
+                                    <td class="W100"><input type="text" name="" id=""></td>
+                                    <td class="W100"><button type="button"  class="add">견적추가</button></td>
+                                </tr>
+                            </table>
+                            <table class="colorGrayClick">
+                                <tr class="height45">
+                                    <td class="W710" rowspan="2">
+                                        상세설명<br>
+                                        <span>수도권, 충청, 강원일부 5톤축 변경 시 40% 추가</span>
+                                    </td>
+                                    <th class="W180">추가구성품목</th>
+                                    <th class="W150">수량</th>
+                                    <th class="W180">규격</th>
+                                    <th class="W100">단가</th>
+                                </tr>
+                                <tr class="height55">
+                                    <td class="W180">날개형 그레이팅</td>
+                                    <td class="W150">
+                                        <label for="">
+                                            <input type="text" >
+                                            <button type="button" class="add">견적추가</button>
+                                        </label>
+                                    </td>
+                                    <td class="W180">295*995*25</td>
+                                    <td class="W100">16,900</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tableWrap">
+                            <table class="background">
+                                <tr>
+                                    <th class="W100">사진4</th>
+                                    <th class="W236">품명</th>
+                                    <th class="W220">
+                                        규격<br><span>(내경기준 : 폭X깊이X길이X두께)</span>
+                                    </th>
+                                    <th class="W60">
+                                        재고<br><span>(본)</span>
+                                    </th>
+                                    <th class="W60">
+                                        중량<br><span>(Kg)</span>
+                                    </th>
+                                    <th class="W135">
+                                        도매단가<br><span>(원/부가세별도)</span>
+                                    </th>
+                                    <th class="W75">
+                                        상차수량<br><span>(본/25톤)</span>
+                                    </th>
+                                    <!-- <th class="W134">
+                                        운반비 예상<br><span>(본/30만원/25톤)</span>
+                                    </th> -->
+                                    <th class="W100">추가상품정보</th>
+                                    <th class="W100">견적수량</th>
+                                    <th class="W100">견적추가</th>
+                                </tr>
+                            </table>
+                            <table class="toggle">
+                                <tr>
+                                    <td class="W100" onClick="location.href='./productDetailsPage.html'"><div class="buyImg"></div></td>
+                                    <td class="W236 fontW" onClick="location.href='./productDetailsPage.html'">U형 플륨관 (벤치 1종)</td>
+                                    <td class="W220" onClick="location.href='./productDetailsPage.html'">310*275*3000*32T</td>
+                                    <td class="W60">220</td>
+                                    <td class="W60">145</td>
+                                    <td class="W135">31,500</td>
+                                    <td class="W75">128</td>
+                                    <!-- <td class="W134">2,400</td> -->
+                                    <td class="W100"><button type="button" class="colorGray colorGrayBtn">내용보기</button></td>
+                                    <td class="W100"><input type="text" name="" id="" ></td>
+                                    <td class="W100"><button type="button" class="add">견적추가</button></td>
+                                </tr>
+                            </table>
+                            <table class="colorGrayClick">
+                                <tr class="height45">
+                                    <td class="W710" rowspan="2">
+                                        상세설명<br>
+                                        <span>수도권, 충청, 강원일부 5톤축 변경 시 40% 추가</span>
+                                    </td>
+                                    <th class="W180">추가구성품목</th>
+                                    <th class="W150">수량</th>
+                                    <th class="W180">규격</th>
+                                    <th class="W100">단가</th>
+                                </tr>
+                                <tr class="height55">
+                                    <td class="W180">날개형 그레이팅</td>
+                                    <td class="W150">
+                                        <label for="">
+                                            <input type="text">
+                                            <button type="button"  class="add">견적추가</button>
+                                        </label>
+                                    </td>
+                                    <td class="W180">295*995*25</td>
+                                    <td class="W100">16,900</td>
+                                </tr>
+                            </table>
+                            <table class="pageChange toggle">
+                                <tr>
+                                    <td class="W100" onClick="location.href='./productDetailsPage.html'"><div class="buyImg" ></div></td>
+                                    <td class="W236" onClick="location.href='./productDetailsPage.html'">U형 플륨관 (벤치 1종)</td>
+                                    <td class="W220" onClick="location.href='./productDetailsPage.html'">425*350*2000*38T</td>
+                                    <td class="W60">125</td>
+                                    <td class="W60">210</td>
+                                    <td class="W135">40,000</td>
+                                    <td class="W75">86</td>
+                                    <!-- <td class="W134">3,500</td> -->
+                                    <td class="W100"><button type="button" class="colorGray colorGrayBtn">내용보기</button></td>
+                                    <td class="W100"><input type="text" name="" id=""></td>
+                                    <td class="W100"><button type="button"  class="add">견적추가</button></td>
+                                </tr>
+                            </table>
+                            <table class="colorGrayClick">
+                                <tr class="height45">
+                                    <td class="W710" rowspan="2">
+                                        상세설명<br>
+                                        <span>수도권, 충청, 강원일부 5톤축 변경 시 40% 추가</span>
+                                    </td>
+                                    <th class="W180">추가구성품목</th>
+                                    <th class="W150">수량</th>
+                                    <th class="W180">규격</th>
+                                    <th class="W100">단가</th>
+                                </tr>
+                                <tr class="height55">
+                                    <td class="W180">날개형 그레이팅</td>
+                                    <td class="W150">
+                                        <label for="">
+                                            <input type="text" >
+                                            <button type="button" class="add">견적추가</button>
+                                        </label>
+                                    </td>
+                                    <td class="W180">295*995*25</td>
+                                    <td class="W100">16,900</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tableWrap">
+                            <table class="background">
+                                <tr>
+                                    <th class="W100">사진5</th>
+                                    <th class="W236">품명</th>
+                                    <th class="W220">
+                                        규격<br><span>(내경기준 : 폭X깊이X길이X두께)</span>
+                                    </th>
+                                    <th class="W60">
+                                        재고<br><span>(본)</span>
+                                    </th>
+                                    <th class="W60">
+                                        중량<br><span>(Kg)</span>
+                                    </th>
+                                    <th class="W135">
+                                        도매단가<br><span>(원/부가세별도)</span>
+                                    </th>
+                                    <th class="W75">
+                                        상차수량<br><span>(본/25톤)</span>
+                                    </th>
+                                    <!-- <th class="W134">
+                                        운반비 예상<br><span>(본/30만원/25톤)</span>
+                                    </th> -->
+                                    <th class="W100">추가상품정보</th>
+                                    <th class="W100">견적수량</th>
+                                    <th class="W100">견적추가</th>
+                                </tr>
+                            </table>
+                            <table class="toggle">
+                                <tr>
+                                    <td class="W100" onClick="location.href='./productDetailsPage.html'"><div class="buyImg"></div></td>
+                                    <td class="W236 fontW" onClick="location.href='./productDetailsPage.html'">U형 플륨관 (벤치 1종)</td>
+                                    <td class="W220" onClick="location.href='./productDetailsPage.html'">310*275*3000*32T</td>
+                                    <td class="W60">220</td>
+                                    <td class="W60">145</td>
+                                    <td class="W135">31,500</td>
+                                    <td class="W75">128</td>
+                                    <!-- <td class="W134">2,400</td> -->
+                                    <td class="W100"><button type="button" class="colorGray colorGrayBtn">내용보기</button></td>
+                                    <td class="W100"><input type="text" name="" id="" ></td>
+                                    <td class="W100"><button type="button" class="add">견적추가</button></td>
+                                </tr>
+                            </table>
+                            <table class="colorGrayClick">
+                                <tr class="height45">
+                                    <td class="W710" rowspan="2">
+                                        상세설명<br>
+                                        <span>수도권, 충청, 강원일부 5톤축 변경 시 40% 추가</span>
+                                    </td>
+                                    <th class="W180">추가구성품목</th>
+                                    <th class="W150">수량</th>
+                                    <th class="W180">규격</th>
+                                    <th class="W100">단가</th>
+                                </tr>
+                                <tr class="height55">
+                                    <td class="W180">날개형 그레이팅</td>
+                                    <td class="W150">
+                                        <label for="">
+                                            <input type="text">
+                                            <button type="button"  class="add">견적추가</button>
+                                        </label>
+                                    </td>
+                                    <td class="W180">295*995*25</td>
+                                    <td class="W100">16,900</td>
+                                </tr>
+                            </table>
+                            <table class="pageChange toggle">
+                                <tr>
+                                    <td class="W100" onClick="location.href='./productDetailsPage.html'"><div class="buyImg" ></div></td>
+                                    <td class="W236" onClick="location.href='./productDetailsPage.html'">U형 플륨관 (벤치 1종)</td>
+                                    <td class="W220" onClick="location.href='./productDetailsPage.html'">425*350*2000*38T</td>
+                                    <td class="W60">125</td>
+                                    <td class="W60">210</td>
+                                    <td class="W135">40,000</td>
+                                    <td class="W75">86</td>
+                                    <!-- <td class="W134">3,500</td> -->
+                                    <td class="W100"><button type="button" class="colorGray colorGrayBtn">내용보기</button></td>
+                                    <td class="W100"><input type="text" name="" id=""></td>
+                                    <td class="W100"><button type="button"  class="add">견적추가</button></td>
+                                </tr>
+                            </table>
+                            <table class="colorGrayClick">
+                                <tr class="height45">
+                                    <td class="W710" rowspan="2">
+                                        상세설명<br>
+                                        <span>수도권, 충청, 강원일부 5톤축 변경 시 40% 추가</span>
+                                    </td>
+                                    <th class="W180">추가구성품목</th>
+                                    <th class="W150">수량</th>
+                                    <th class="W180">규격</th>
+                                    <th class="W100">단가</th>
+                                </tr>
+                                <tr class="height55">
+                                    <td class="W180">날개형 그레이팅</td>
+                                    <td class="W150">
+                                        <label for="">
+                                            <input type="text" >
+                                            <button type="button" class="add">견적추가</button>
+                                        </label>
+                                    </td>
+                                    <td class="W180">295*995*25</td>
+                                    <td class="W100">16,900</td>
+                                </tr>
+                            </table>
+                        </div>
                         <!-- <div class="tabMenu">
                             <img src="./img/tabBtn.png" alt="">
                             <p>견<br>적<br>보<br>기</p>
@@ -4817,38 +5347,46 @@
     <script src="./js/product.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
-        var swiper1 = new Swiper('.swiper', {
+        var swiper1 = new Swiper('.swiper.swiper_1', {
             slidesPerView: 8,
             direction: getDirection(),
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            on: {
-                resize: function () {
-                swiper1.changeDirection(getDirection());
-                },
-            },
-            });
+                nextEl: '.swiper-button-next.swiper-button-next_1',
+                prevEl: '.swiper-button-prev.swiper-button-prev_1',
+            }
+        });
 
 
             // 나중에 추가 했을때 이름 바꾸기
 
-            var swiper2 = new Swiper('.swiper_2', {
+        var swiper2 = new Swiper('.swiper.swiper_2', {
             slidesPerView: 8, // 두 번째 스와이퍼의 설정을 여기에 추가
             direction: getDirection(), // 두 번째 스와이퍼의 설정을 여기에 추가
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            on: {
-                resize: function () {
-                swiper2.changeDirection(getDirection());
-                },
-            },
-            });
+                nextEl: '.swiper-button-next.swiper-button-next_2',
+                prevEl: '.swiper-button-prev.swiper-button-prev_2',
+            }
+        });
 
-            function getDirection() {
+        var swiper3 = new Swiper('.swiper.swiper_3', {
+            slidesPerView: 8, // 두 번째 스와이퍼의 설정을 여기에 추가
+            direction: getDirection(), // 두 번째 스와이퍼의 설정을 여기에 추가
+            navigation: {
+                nextEl: '.swiper-button-next.swiper-button-next_3',
+                prevEl: '.swiper-button-prev.swiper-button-prev_3',
+            }
+        });
+
+        var swiper4 = new Swiper('.swiper.swiper_4', {
+            slidesPerView: 8, // 두 번째 스와이퍼의 설정을 여기에 추가
+            direction: getDirection(), // 두 번째 스와이퍼의 설정을 여기에 추가
+            navigation: {
+                nextEl: '.swiper-button-next.swiper-button-next_4',
+                prevEl: '.swiper-button-prev.swiper-button-prev_4',
+            }
+        });
+
+        function getDirection() {
             var windowWidth = window.innerWidth;
             var direction = windowWidth <= 760 ? 'vertical' : 'horizontal';
 

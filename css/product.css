@@ -89,9 +89,10 @@
     top: -3px;
     line-height: 20px;
     height: 261px;
-    display: none;
     overflow-y: scroll;
     width: 196px;
+    background: #fbfbfb;
+    display: none;
 }
 .secoudDepth::-webkit-scrollbar {
     width: 8px;
@@ -120,7 +121,7 @@
 .firstDepth > li > a.selected {
     color: #004ea2;
 }
-.secoudDepth > li > .select {
+.secoudDepth > li > a.select {
     color: #004ea2;
 }
 
@@ -160,6 +161,7 @@
 }
 .classifyselect{
 width: 270px;
+background: #fbfbfb;
 }
 .classifyRName{
     padding-left: 28px;
@@ -215,11 +217,12 @@ width: 270px;
 }
 .productsTop{
     display: flex;
-    gap: 14px;
+    gap: 13.8px;
     height: 153px;
 }
 .productsGrop{
     width: 85px;
+    background: #fbfbfb;
 }
 .productPhoto{
     width: 85px;
@@ -247,6 +250,15 @@ width: 270px;
     width: 780px    ;
     position: relative;
 }
+.productsTop.productsTopF.swiper-wrapper{
+    z-index: 0;
+}
+.swiper.swiper-initialized.swiper-horizontal{
+    z-index: 0;
+}
+.swiper.swiper-horizontal{
+    padding-bottom: 26px;
+}
 .swiper-button-prev:after{
     position: absolute;
     left: -55px;
@@ -259,6 +271,7 @@ width: 270px;
 }
 .swiper-backface-hidden .swiper-slide, .productsGrop{
     width: 84px !important; 
+    height: 127px!important; 
 }
 .swiper-button-next, .swiper-button-prev{
     color: #004ea2 !important;
@@ -346,7 +359,11 @@ width: 270px;
     box-shadow:  0 0 0 2px #004ea2 inset;
     border-color: #004ea2;
 }
-
+h1.productBoxFontDown{
+    font-size: 2em;
+    letter-spacing: -3.98px;
+    padding-bottom: 19px;
+}
 
 
 
@@ -479,6 +496,9 @@ width: 270px;
     display: flex;
     gap: 3px;
     justify-content: center;
+}
+.selectBoxItem input:focus::placeholder{
+    color: transparent;
 }
 .selectBoxItem .bestProduct .W150 input, .selectBoxItem .bestProduct .W150  button{
     width: 50px;
