@@ -58,7 +58,8 @@ $(function () {
       $("#secoundDepthKing" + i).css("display", "flex");
       $("#secoundDepthKing" + i)
         .find(".productPhoto")
-        .removeClass("productPtClick");
+        .eq(0)
+        .trigger("click");
       $("#secoundDepthKing" + i)
         .find(".clickColor")
         .eq(0)
@@ -88,7 +89,8 @@ $(function () {
       $(".classifyShow .productBox")
         .eq(linkIndex)
         .find(".productPhoto")
-        .removeClass("productPtClick");
+        .eq(0)
+        .trigger("click");
       $(".classifyShow .productBox")
         .find(".clickColor")
         .eq(linkIndex)

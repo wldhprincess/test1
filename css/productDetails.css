@@ -65,7 +65,7 @@
 .mainPhoto{
   width: 100%;
   height: 100%;
-  background: url(../img/product1.png) no-repeat center;
+  background: url(../img/mainpage_product/benchFlumeTube_01.png) no-repeat center;
   background-size: contain;
 }
 .viewDetailsR{
@@ -254,7 +254,7 @@ color: #22a21b;
   background-size: cover;
 }
 .viewDetailsImgBox1{
-  background: url(../img/product1.png) no-repeat;
+  background: url(../img/mainpage_product/benchFlumeTube_01.png) no-repeat;
   background-size: contain;
 }
 
@@ -518,7 +518,7 @@ margin-right: -3px;
   /* background-size: contain; */
 }
 .selectBoxItem .bestProduct .buyImg.buyImg2{
-  background: url(../img/product17.png) no-repeat center;
+  background: url(../img/mainpage_product/benchFlumeTube_017.png) no-repeat center;
   background-size: 60px;
 }
 

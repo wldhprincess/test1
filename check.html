@@ -5097,27 +5097,29 @@
                             <div id="map"></div>
                             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e207aa5e93734278f09da0ada22509e"></script>
                             <script>
-                                // 카카오맵 API를 불러온 후 실행될 콜백 함수
-                                kakao.maps.load(function () {
-                                // 지도를 표시할 div의 id를 가져옴
-                                var container = document.getElementById('map');
-                            
-                                // 지도를 생성하는데 필요한 기본 옵션 설정
-                                var options = {
-                                    center: new kakao.maps.LatLng(37.22935437525413, 126.97293607845405), // 지도의 중심 좌표 (위도, 경도)
-                                    level: 3 // 지도의 확대 레벨 (1부터 14까지 가능)
-                                };
-                            
-                                // 지도를 생성
-                                var map = new kakao.maps.Map(container, options);
-                            
-                                // 지도에 마커를 표시하는 예시 (선택 사항)
-                                var markerPosition = new kakao.maps.LatLng(37.22935437525413, 126.97293607845405);
-                                var marker = new kakao.maps.Marker({
-                                    position: markerPosition
-                                });
-                                marker.setMap(map);
-                                });
+                                if (location.hostname != '127.0.0.1') {
+                                        // 카카오맵 API를 불러온 후 실행될 콜백 함수
+                                        kakao.maps.load(function () {
+                                            // 지도를 표시할 div의 id를 가져옴
+                                            var container = document.getElementById('map');
+
+                                            // 지도를 생성하는데 필요한 기본 옵션 설정
+                                            var options = {
+                                                center: new kakao.maps.LatLng(37.22935437525413, 126.97293607845405), // 지도의 중심 좌표 (위도, 경도)
+                                                level: 3 // 지도의 확대 레벨 (1부터 14까지 가능)
+                                            };
+
+                                            // 지도를 생성
+                                            var map = new kakao.maps.Map(container, options);
+
+                                            // 지도에 마커를 표시하는 예시 (선택 사항)
+                                            var markerPosition = new kakao.maps.LatLng(37.22935437525413, 126.97293607845405);
+                                            var marker = new kakao.maps.Marker({
+                                                position: markerPosition
+                                            });
+                                            marker.setMap(map);
+                                        });
+                                    }
                             </script>
                         </div>
                     </div>
